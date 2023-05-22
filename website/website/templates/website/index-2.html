@@ -67,31 +67,13 @@
                         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                             <ul class="navbar-nav m-auto">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active">
-                                        Home 
-                                        <i class='bx bx-chevron-down'></i>
+                                    <a href="/" class="nav-link">
+                                        Главная
                                     </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="/" class="nav-link">
-                                                Home One  
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="index-2.html" class="nav-link active">
-                                                Home Two
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="index-3.html" class="nav-link">
-                                                Home Three
-                                            </a>
-                                        </li>
-                                    </ul>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        Pages 
+                                        Pages
                                         <i class='bx bx-chevron-down'></i>
                                     </a>
                                     <ul class="dropdown-menu">
@@ -103,7 +85,7 @@
 
                                         <li class="nav-item">
                                             <a href="#" class="nav-link">
-                                                Shop 
+                                                Shop
                                                 <i class='bx bx-chevron-down'></i>
                                             </a>
                                             <ul class="dropdown-menu">
@@ -119,47 +101,47 @@
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="shop-details-right-sidebar.html" class="nav-link">
-                                                        Shop Details Right Sidebar 
+                                                        Shop Details Right Sidebar
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="tracking-order.html" class="nav-link">
-                                                        Tracking Order 
+                                                        Tracking Order
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="customer-services.html" class="nav-link">
-                                                        Customer Services  
+                                                        Customer Services
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="compare.html" class="nav-link">
-                                                        Compare  
+                                                        Compare
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="cart.html" class="nav-link">
-                                                        Cart  
+                                                        Cart
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="checkout.html" class="nav-link">
-                                                        Checkout  
+                                                        Checkout
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="wishlist.html" class="nav-link">
-                                                        Wishlist  
+                                                        Wishlist
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="my-account.html" class="nav-link">
-                                                        My Account  
+                                                        My Account
                                                     </a>
                                                 </li>
                                             </ul>
                                         </li>
-                                        
+
                                         <li class="nav-item">
                                             <a href="faq.html" class="nav-link">
                                                 FAQ
@@ -225,7 +207,7 @@
                                                 Search Page
                                             </a>
                                         </li>
-                                        
+
                                         <li class="nav-item">
                                             <a href="coming-soon.html" class="nav-link">
                                                 Coming Soon
@@ -295,15 +277,6 @@
                             </ul>
 
                             <div class="nav-bar-side">
-                                <div class="language-nav-list">
-                                    <select class="language-list-item">
-                                        <option>English</option>
-                                        <option>العربيّة</option>
-                                        <option>Deutsch</option>
-                                        <option>Português</option>
-                                        <option>简体中文</option>
-                                    </select>	
-                                </div>
 
                                 <div class="nav-bar-btn">
                                     <a href="my-account.html" class="account-btn">My account</a>
@@ -359,33 +332,18 @@
                             <div class="dropdown category-list-dropdown">
                                 <button class="btn dropdown-toggle" type="button" id="dropdownMenuButtoncategory" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class='bx bx-list-ul'></i>
-                                        Categories
+                                        Категории
                                     <i class='bx bx-chevron-down'></i>
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButtoncategory">
-                                    <a href="#" class="nav-link-item">
-                                        Fish and Meat
+                                    <a href="{% url 'category' 'TE' %}" class="nav-link-item">
+                                        Чай
                                     </a>
-                                    <a href="#">
-                                        Fruits & Vegetables
+                                    <a href="{% url 'category' 'CF' %}">
+                                        кофе
                                     </a>
-                                    <a href="#">
-                                        Beverage
-                                    </a>
-                                    <a href="#">
-                                        Baby Care
-                                    </a>
-                                    <a href="#">
-                                        Milk and Dairy
-                                    </a>
-                                    <a href="#">
-                                        Home and Cleaning
-                                    </a>
-                                    <a href="#">
-                                        Spices & Bake
-                                    </a>
-                                    <a href="#">
-                                        Fresh Fruits
+                                    <a href="{% url 'category' 'SP' %}">
+                                        Сиропы
                                     </a>
                                 </div>
                             </div>
@@ -406,7 +364,6 @@
                     <div class="col-lg-2 col-md-2">
                         <div class="nav-bottom-side">
                             <ul class="nav-bottom-list">
-                                <li><a href="#"><i class='bx bx-repost'></i></a></li>
                                 <li><a href="#"><i class='bx bx-heart'></i></a></li>
                                 <li class="cart-span">
                                     <a href="#"><i class='bx bx-cart'></i></a>
@@ -489,345 +446,172 @@
         </div>
         <!-- Banner Slider Area End -->
 
-        <!-- Popular Product Area -->
-        <section class="popular-product-area pt-100 pb-70">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h2>Most Popular Products</h2>
-                </div>
-                <ul class="filter-menu text-center"> 
-                    <li class="filter active" data-filter="all">All</li>
-                    <li class="filter" data-filter=".new">New</li>
-                    <li class="filter" data-filter=".sale">On Sale</li>
-                    <li class="filter" data-filter=".top-rising">Top Rising</li>
-                    <li class="filter" data-filter=".shipping">Free Shipping</li>
-                </ul>
+<!--        &lt;!&ndash; Popular Product Area &ndash;&gt;-->
+<!--        <section class="popular-product-area pt-100 pb-70">-->
+<!--            <div class="container">-->
+<!--&lt;!&ndash;                <div class="section-title text-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <h2>Most Popular Products</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                <ul class="filter-menu text-center"> &ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="filter active" data-filter="all">All</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="filter" data-filter=".new">New</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="filter" data-filter=".sale">On Sale</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="filter" data-filter=".top-rising">Top Rising</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <li class="filter" data-filter=".shipping">Free Shipping</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                </ul>&ndash;&gt;-->
 
-                <div id="Container" class="row pt-45"> 
-                    <div class="col-lg-3 col-sm-6 mix sale">
-                        <div class="popular-product-item">
-                            <a href="shop-details.html">
-                                <img src="{% static 'website/images/popular-product/popular-product1.png' %}" alt="Product Images">
-                            </a>
-                            <div class="popular-product-tag tag-bg2">
-                                <h3>12%</h3>
-                            </div>
-                            <div class="content">
-                                <h3><a href="shop-details.html">Almond Nuts</a></h3>
-                                <span>$15.0/Kg <del>$17.0/Kg</del></span>
-                                <ul class="popular-product-action">
-                                    <li><a href="#"><i class='bx bx-repost'></i></a></li>
-                                    <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                                    <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+<!--                <div id="Container" class="row pt-45">-->
+<!--                    <div class="col-lg-3 col-sm-6 mix sale">-->
+<!--                        <div class="popular-product-item">-->
+<!--                            <a href="shop-details.html">-->
+<!--                                <img src="{% static 'website/images/popular-product/popular-product1.png' %}" alt="Product Images">-->
+<!--                            </a>-->
+<!--                            <div class="popular-product-tag tag-bg2">-->
+<!--                                <h3>12%</h3>-->
+<!--                            </div>-->
+<!--                            <div class="content">-->
+<!--                                <h3><a href="shop-details.html">Almond Nuts</a></h3>-->
+<!--                                <span>$15.0/Kg <del>$17.0/Kg</del></span>-->
+<!--                                <ul class="popular-product-action">-->
+<!--                                    <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>-->
+<!--                                    <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <div class="col-lg-3 col-sm-6 mix new top-rising">
-                        <div class="popular-product-item">
-                            <a href="shop-details.html">
-                                <img src="{% static 'website/images/popular-product/popular-product2.png' %}" alt="Product Images">
-                            </a>
-                            <div class="popular-product-tag tag-bg1">
-                                <h3>New</h3>
-                            </div>
-                            <div class="content">
-                                <h3><a href="shop-details.html">Rear Organic Saffron</a></h3>
-                                <span>$400.0/Kg</span>
-                                <ul class="popular-product-action">
-                                    <li><a href="#"><i class='bx bx-repost'></i></a></li>
-                                    <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                                    <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="col-lg-3 col-sm-6 mix new top-rising">-->
+<!--                        <div class="popular-product-item">-->
+<!--                            <a href="shop-details.html">-->
+<!--                                <img src="{% static 'website/images/popular-product/popular-product2.png' %}" alt="Product Images">-->
+<!--                            </a>-->
+<!--                            <div class="popular-product-tag tag-bg1">-->
+<!--                                <h3>New</h3>-->
+<!--                            </div>-->
+<!--                            <div class="content">-->
+<!--                                <h3><a href="shop-details.html">Rear Organic Saffron</a></h3>-->
+<!--                                <span>$400.0/Kg</span>-->
+<!--                                <ul class="popular-product-action">-->
+<!--                                    <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>-->
+<!--                                    <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <div class="col-lg-3 col-sm-6 mix sale shipping">
-                        <div class="popular-product-item">
-                            <a href="shop-details.html">
-                                <img src="{% static 'website/images/popular-product/popular-product3.png' %}" alt="Product Images">
-                            </a>
-                            <div class="popular-product-tag tag-bg2">
-                                <h3>21%</h3>
-                            </div>
-                            <div class="content">
-                                <h3><a href="shop-details.html">Black Fresh Berry</a></h3>
-                                <span>$5.0/Kg <del>$7.0/Kg</del></span>
-                                <ul class="popular-product-action">
-                                    <li><a href="#"><i class='bx bx-repost'></i></a></li>
-                                    <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                                    <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="col-lg-3 col-sm-6 mix sale shipping">-->
+<!--                        <div class="popular-product-item">-->
+<!--                            <a href="shop-details.html">-->
+<!--                                <img src="{% static 'website/images/popular-product/popular-product3.png' %}" alt="Product Images">-->
+<!--                            </a>-->
+<!--                            <div class="popular-product-tag tag-bg2">-->
+<!--                                <h3>21%</h3>-->
+<!--                            </div>-->
+<!--                            <div class="content">-->
+<!--                                <h3><a href="shop-details.html">Black Fresh Berry</a></h3>-->
+<!--                                <span>$5.0/Kg <del>$7.0/Kg</del></span>-->
+<!--                                <ul class="popular-product-action">-->
+<!--                                    <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>-->
+<!--                                    <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <div class="col-lg-3 col-sm-6 mix new top-rising">
-                        <div class="popular-product-item">
-                            <a href="shop-details.html">
-                                <img src="{% static 'website/images/popular-product/popular-product4.png' %}" alt="Product Images">
-                            </a>
-                            <div class="popular-product-tag tag-bg1">
-                                <h3>33%</h3>
-                            </div>
-                            <div class="content">
-                                <h3><a href="shop-details.html">Fresh Capsicum</a></h3>
-                                <span>$5.0/Kg <del>$7.0/Kg</del></span>
-                                <ul class="popular-product-action">
-                                    <li><a href="#"><i class='bx bx-repost'></i></a></li>
-                                    <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                                    <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="col-lg-3 col-sm-6 mix new top-rising">-->
+<!--                        <div class="popular-product-item">-->
+<!--                            <a href="shop-details.html">-->
+<!--                                <img src="{% static 'website/images/popular-product/popular-product4.png' %}" alt="Product Images">-->
+<!--                            </a>-->
+<!--                            <div class="popular-product-tag tag-bg1">-->
+<!--                                <h3>33%</h3>-->
+<!--                            </div>-->
+<!--                            <div class="content">-->
+<!--                                <h3><a href="shop-details.html">Fresh Capsicum</a></h3>-->
+<!--                                <span>$5.0/Kg <del>$7.0/Kg</del></span>-->
+<!--                                <ul class="popular-product-action">-->
+<!--                                    <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>-->
+<!--                                    <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <div class="col-lg-3 col-sm-6 mix sale shipping">
-                        <div class="popular-product-item">
-                            <a href="shop-details.html">
-                                <img src="{% static 'website/images/popular-product/popular-product5.png' %}{% static 'website/alt="Product Images">
-                            </a>
-                            <div class="content">
-                                <h3><a href="shop-details.html">Fresh Pineapple</a></h3>
-                                <span>$3.5/Kg <del>$4.0/Kg</del></span>
-                                <ul class="popular-product-action">
-                                    <li><a href="#"><i class='bx bx-repost'></i></a></li>
-                                    <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                                    <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="col-lg-3 col-sm-6 mix sale shipping">-->
+<!--                        <div class="popular-product-item">-->
+<!--                            <a href="shop-details.html">-->
+<!--                                <img src="{% static 'website/images/popular-product/popular-product5.png' %}{% static 'website/alt="Product Images">-->
+<!--                            </a>-->
+<!--                            <div class="content">-->
+<!--                                <h3><a href="shop-details.html">Fresh Pineapple</a></h3>-->
+<!--                                <span>$3.5/Kg <del>$4.0/Kg</del></span>-->
+<!--                                <ul class="popular-product-action">-->
+<!--                                    <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>-->
+<!--                                    <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <div class="col-lg-3 col-sm-6 mix new top-rising">
-                        <div class="popular-product-item">
-                            <a href="shop-details.html">
-                                <img src="{% static 'website/images/popular-product/popular-product6.png' %}{% static 'website/alt="Product Images">
-                            </a>
-                            <div class="popular-product-tag tag-bg2">
-                                <h3>12%</h3>
-                            </div>
-                            <div class="content">
-                                <h3><a href="shop-details.html">Olive Oil</a></h3>
-                                <span>$6.0/Kg <del>$7.5/Kg</del></span>
-                                <ul class="popular-product-action">
-                                    <li><a href="#"><i class='bx bx-repost'></i></a></li>
-                                    <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                                    <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="col-lg-3 col-sm-6 mix new top-rising">-->
+<!--                        <div class="popular-product-item">-->
+<!--                            <a href="shop-details.html">-->
+<!--                                <img src="{% static 'website/images/popular-product/popular-product6.png' %}{% static 'website/alt="Product Images">-->
+<!--                            </a>-->
+<!--                            <div class="popular-product-tag tag-bg2">-->
+<!--                                <h3>12%</h3>-->
+<!--                            </div>-->
+<!--                            <div class="content">-->
+<!--                                <h3><a href="shop-details.html">Olive Oil</a></h3>-->
+<!--                                <span>$6.0/Kg <del>$7.5/Kg</del></span>-->
+<!--                                <ul class="popular-product-action">-->
+<!--                                    <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>-->
+<!--                                    <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <div class="col-lg-3 col-sm-6 mix sale shipping">
-                        <div class="popular-product-item">
-                            <a href="shop-details.html">
-                                <img src="{% static 'website/images/popular-product/popular-product7.png' %}{% static 'website/alt="Product Images">
-                            </a>
-                            <div class="content">
-                                <h3><a href="shop-details.html">Rear Organic Butter</a></h3>
-                                <span>$2.0/Kg </span>
-                                <ul class="popular-product-action">
-                                    <li><a href="#"><i class='bx bx-repost'></i></a></li>
-                                    <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                                    <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="col-lg-3 col-sm-6 mix sale shipping">-->
+<!--                        <div class="popular-product-item">-->
+<!--                            <a href="shop-details.html">-->
+<!--                                <img src="{% static 'website/images/popular-product/popular-product7.png' %}{% static 'website/alt="Product Images">-->
+<!--                            </a>-->
+<!--                            <div class="content">-->
+<!--                                <h3><a href="shop-details.html">Rear Organic Butter</a></h3>-->
+<!--                                <span>$2.0/Kg </span>-->
+<!--                                <ul class="popular-product-action">-->
+<!--                                    <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>-->
+<!--                                    <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <div class="col-lg-3 col-sm-6 mix new top-rising shipping">
-                        <div class="popular-product-item">
-                            <a href="shop-details.html">
-                                <img src="{% static 'website/images/popular-product/popular-product8.png' %}{% static 'website/alt="Product Images">
-                            </a>
-                            <div class="popular-product-tag tag-bg1">
-                                <h3>New</h3>
-                            </div>
-                            <div class="content">
-                                <h3><a href="shop-details.html">Fresh Carrots</a></h3>
-                                <span>$6.0/Kg <del>$7.5/Kg</del></span>
-                                <ul class="popular-product-action">
-                                    <li><a href="#"><i class='bx bx-repost'></i></a></li>
-                                    <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                                    <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Popular Product Area End -->
+<!--                    <div class="col-lg-3 col-sm-6 mix new top-rising shipping">-->
+<!--                        <div class="popular-product-item">-->
+<!--                            <a href="shop-details.html">-->
+<!--                                <img src="{% static 'website/images/popular-product/popular-product8.png' %}{% static 'website/alt="Product Images">-->
+<!--                            </a>-->
+<!--                            <div class="popular-product-tag tag-bg1">-->
+<!--                                <h3>New</h3>-->
+<!--                            </div>-->
+<!--                            <div class="content">-->
+<!--                                <h3><a href="shop-details.html">Fresh Carrots</a></h3>-->
+<!--                                <span>$6.0/Kg <del>$7.5/Kg</del></span>-->
+<!--                                <ul class="popular-product-action">-->
+<!--                                    <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>-->
+<!--                                    <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+<!--        &lt;!&ndash; Popular Product Area End &ndash;&gt;-->
 
-        <!-- Deal Area -->
-        <div class="deal-area pb-70">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h2>Our Best Deals</h2>
-                </div>
-                <div class="row pt-45">
-                    <div class="col-lg-4">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="deal-left-side">
-                                    <h3>Black Fresh Berry</h3>
-                                    <span>$3.5<del>$4.0</del></span>
-                                    <div class="rating">
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                    </div>
-                                    <img src="{% static 'website/images/deal-img/deal-img7.png' %}" alt="Images">
-                                    <div id="timer">
-                                        <div id="days"></div>
-                                        <div id="hours"></div>
-                                        <div id="minutes"></div>
-                                        <div id="seconds"></div>
-                                    </div>
-                                    <ul class="deal-action">
-                                        <li><a href="#"><i class='bx bx-repost'></i></a></li>
-                                        <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                                        <li><a href="cart.html" class="active">Add to Cart</a></li>
-                                    </ul>
-                                </div>
-                            </div>
 
-                            <div class="col-lg-12">
-                                <div class="deal-left-side-2">
-                                    <h3>Sign Up to Our Delicate Shop</h3>
-                                    <p>You will get 30% offer! Also you will get bonus.</p>
-                                    <a href="#" class="newsletter-btn">Newsletter</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-8">
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-6 mix">
-                                <div class="deal-item">
-                                    <a href="shop-details.html">
-                                        <img src="{% static 'website/images/deal-img/deal-img1.png' %}" alt="Product Images">
-                                    </a>
-                                    <div class="deal-item-tag tag-bg2">
-                                        <h3>12%</h3>
-                                    </div>
-                                    <div class="content">
-                                        <h3><a href="shop-details.html">Fresh Banana</a></h3>
-                                        <span>$2.0/Kg <del>$2.5</del></span>
-                                        <ul class="deal-item-action">
-                                            <li><a href="#"><i class='bx bx-repost'></i></a></li>
-                                            <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                                            <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-sm-6 mix">
-                                <div class="deal-item">
-                                    <a href="shop-details.html">
-                                        <img src="{% static 'website/images/deal-img/deal-img2.png' %}" alt="Product Images">
-                                    </a>
-                                    <div class="content">
-                                        <h3><a href="shop-details.html">Fresh Beef Meat</a></h3>
-                                        <span>$10.0/Kg <del>$12.5</del></span>
-                                        <ul class="deal-item-action">
-                                            <li><a href="#"><i class='bx bx-repost'></i></a></li>
-                                            <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                                            <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-sm-6 mix">
-                                <div class="deal-item">
-                                    <a href="shop-details.html">
-                                        <img src="{% static 'website/images/deal-img/deal-img3.png' %}" alt="Product Images">
-                                    </a>
-                                    <div class="deal-item-tag tag-bg1">
-                                        <h3>10%</h3>
-                                    </div>
-                                    <div class="content">
-                                        <h3><a href="shop-details.html">Natural Brinjal</a></h3>
-                                        <span>$5.0/Kg <del>$6.5</del></span>
-                                        <ul class="deal-item-action">
-                                            <li><a href="#"><i class='bx bx-repost'></i></a></li>
-                                            <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                                            <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-sm-6 mix">
-                                <div class="deal-item">
-                                    <a href="shop-details.html">
-                                        <img src="{% static 'website/images/deal-img/deal-img4.png' %}" alt="Product Images">
-                                    </a>
-                                    <div class="deal-item-tag tag-bg1">
-                                        <h3>12%</h3>
-                                    </div>
-                                    <div class="content">
-                                        <h3><a href="shop-details.html">Fresh Cucumber</a></h3>
-                                        <span>$2.0/Kg <del>$2.5</del></span>
-                                        <ul class="deal-item-action">
-                                            <li><a href="#"><i class='bx bx-repost'></i></a></li>
-                                            <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                                            <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-sm-6 mix">
-                                <div class="deal-item">
-                                    <a href="shop-details.html">
-                                        <img src="{% static 'website/images/deal-img/deal-img5.png' %}" alt="Product Images">
-                                    </a>
-                                    <div class="deal-item-tag tag-bg1">
-                                        <h3>New</h3>
-                                    </div>
-                                    <div class="content">
-                                        <h3><a href="shop-details.html">Organic Gooseberry</a></h3>
-                                        <span>$5.0/Kg <del>$6.5</del></span>
-                                        <ul class="deal-item-action">
-                                            <li><a href="#"><i class='bx bx-repost'></i></a></li>
-                                            <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                                            <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-sm-6 mix">
-                                <div class="deal-item">
-                                    <a href="shop-details.html">
-                                        <img src="{% static 'website/images/deal-img/deal-img6.png' %}" alt="Product Images">
-                                    </a>
-                                    <div class="content">
-                                        <h3><a href="shop-details.html">Natural Milk</a></h3>
-                                        <span>$7.0/Kg <del>$7.5</del></span>
-                                        <ul class="deal-item-action">
-                                            <li><a href="#"><i class='bx bx-repost'></i></a></li>
-                                            <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                                            <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Deal Area End -->
 
         <!-- Choose Area -->
         <div class="choose-area-two pt-100 pb-70">
@@ -868,7 +652,7 @@
         <div class="latest-product-area ptb-100 pb-70">
             <div class="container">
                 <div class="section-title text-center">
-                    <h2>Latest Products</h2>
+                    <h2>Our Products</h2>
                 </div>
                 <div class="row pt-45">
                     <div class="col-lg-3">
@@ -908,7 +692,6 @@
                                         <h3><a href="shop-details.html">Organic Prawn</a></h3>
                                         <span>$12.0/Kg </span>
                                         <ul class="latest-product-action">
-                                            <li><a href="#"><i class='bx bx-repost'></i></a></li>
                                             <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
                                             <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
                                         </ul>
@@ -928,7 +711,6 @@
                                         <h3><a href="shop-details.html">Fresh Apples</a></h3>
                                         <span>$12.0/Kg <del>$7.0</del></span>
                                         <ul class="latest-product-action">
-                                            <li><a href="#"><i class='bx bx-repost'></i></a></li>
                                             <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
                                             <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
                                         </ul>
@@ -948,7 +730,6 @@
                                         <h3><a href="shop-details.html">Fresh Capsicum</a></h3>
                                         <span>$12.0/Kg <del>$15.0</del></span>
                                         <ul class="latest-product-action">
-                                            <li><a href="#"><i class='bx bx-repost'></i></a></li>
                                             <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
                                             <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
                                         </ul>
@@ -965,7 +746,6 @@
                                         <h3><a href="shop-details.html">fresh Orange</a></h3>
                                         <span>$8.0/Kg <del>$10.0</del></span>
                                         <ul class="latest-product-action">
-                                            <li><a href="#"><i class='bx bx-repost'></i></a></li>
                                             <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
                                             <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
                                         </ul>
@@ -982,7 +762,6 @@
                                         <h3><a href="shop-details.html"> Organic Butter</a></h3>
                                         <span>$15.0/Kg </span>
                                         <ul class="latest-product-action">
-                                            <li><a href="#"><i class='bx bx-repost'></i></a></li>
                                             <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
                                             <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
                                         </ul>
@@ -1002,7 +781,6 @@
                                         <h3><a href="shop-details.html"> Red Grapes</a></h3>
                                         <span>$10.0/Kg <del>$11.0/Kg</del> </span>
                                         <ul class="latest-product-action">
-                                            <li><a href="#"><i class='bx bx-repost'></i></a></li>
                                             <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
                                             <li><a href="cart.html"><i class='bx bx-cart'></i></a></li>
                                         </ul>
@@ -1016,32 +794,7 @@
         </div>
         <!-- Latest Product Area End -->
 
-        <!-- Brand Area -->
-        <div class="brand-area pb-100">
-            <div class="container">
-                <div class="brand-slider owl-carousel owl-theme">
-                    <div class="brand-item">
-                        <img src="{% static 'website/images/brand-logo/brand-style1.png' %}" alt="Images">
-                    </div>
-                    <div class="brand-item">
-                        <img src="{% static 'website/images/brand-logo/brand-style2.png' %}" alt="Images">
-                    </div>
-                    <div class="brand-item">
-                        <img src="{% static 'website/images/brand-logo/brand-style3.png' %}" alt="Images">
-                    </div>
-                    <div class="brand-item">
-                        <img src="{% static 'website/images/brand-logo/brand-style4.png' %}" alt="Images">
-                    </div>
-                    <div class="brand-item">
-                        <img src="{% static 'website/images/brand-logo/brand-style5.png' %}" alt="Images">
-                    </div>
-                    <div class="brand-item">
-                        <img src="{% static 'website/images/brand-logo/brand-style2.png' %}" alt="Images">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Brand Area End -->
+
 
         <!-- Testimonials Area Two -->
         <div class="testimonials-area-two ptb-100">
