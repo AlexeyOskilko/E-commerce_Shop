@@ -380,68 +380,28 @@
         <!-- Banner Slider Area -->
         <div class="banner-slider-area">
             <div class="banner-slider owl-carousel owl-theme">
+            {% for object in obj %}
                 <div class="container-fluid">
                     <div class="banner-slider-item">
                         <div class="row align-items-center">
                             <div class="col-lg-7">
                                 <div class="banner-slider-img">
-                                    <img src="{% static 'website/images/home-two/home-two1.png' %}" alt="Banner Images">
+                                    <img src="{{object.image.url}}" alt="Banner Images">
                                 </div>
                             </div>
 
                             <div class="col-lg-5">
                                 <div class="banner-slider-content">
                                     <span>PURE AND NATURAL</span>
-                                    <h2>100% Pure Organic & Fresh Meat</h2>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscins elitr, seddiams nonumy eirmod.</p>
+                                    <h2>{{object.title}}</h2>
+                                    <p>{{object.sub_title}}</p>
                                     <a href="#" class="default-btn btn-bg-two border-radius-50">Shop Now</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="container-fluid">
-                    <div class="banner-slider-item">
-                        <div class="row align-items-center">
-                            <div class="col-lg-7">
-                                <div class="banner-slider-img">
-                                    <img src="{% static 'website/images/home-two/home-two2.png' %}" alt="Banner Images">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-5">
-                                <div class="banner-slider-content">
-                                    <span>PURE AND NATURAL</span>
-                                    <h2>100% Pure Organic & Fresh Fruits</h2>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscins elitr, seddiams nonumy eirmod.</p>
-                                    <a href="#" class="default-btn btn-bg-two border-radius-50">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-fluid">
-                    <div class="banner-slider-item">
-                        <div class="row align-items-center">
-                            <div class="col-lg-7">
-                                <div class="banner-slider-img">
-                                    <img src="{% static 'website/images/home-two/home-two3.png' %}" alt="Banner Images">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-5">
-                                <div class="banner-slider-content">
-                                    <span>PURE AND NATURAL</span>
-                                    <h2>100% Pure Organic & Fresh Vegetable</h2>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscins elitr, seddiams nonumy eirmod.</p>
-                                    <a href="#" class="default-btn btn-bg-two border-radius-50">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            {% endfor %}
             </div>
         </div>
         <!-- Banner Slider Area End -->
@@ -464,7 +424,7 @@
 <!--                    <div class="col-lg-3 col-sm-6 mix sale">-->
 <!--                        <div class="popular-product-item">-->
 <!--                            <a href="shop-details.html">-->
-<!--                                <img src="{% static 'website/images/popular-product/popular-product1.png' %}" alt="Product Images">-->
+<!--                                <img src="{% static 'application/images/popular-product/popular-product1.png' %}" alt="Product Images">-->
 <!--                            </a>-->
 <!--                            <div class="popular-product-tag tag-bg2">-->
 <!--                                <h3>12%</h3>-->
@@ -483,7 +443,7 @@
 <!--                    <div class="col-lg-3 col-sm-6 mix new top-rising">-->
 <!--                        <div class="popular-product-item">-->
 <!--                            <a href="shop-details.html">-->
-<!--                                <img src="{% static 'website/images/popular-product/popular-product2.png' %}" alt="Product Images">-->
+<!--                                <img src="{% static 'application/images/popular-product/popular-product2.png' %}" alt="Product Images">-->
 <!--                            </a>-->
 <!--                            <div class="popular-product-tag tag-bg1">-->
 <!--                                <h3>New</h3>-->
@@ -502,7 +462,7 @@
 <!--                    <div class="col-lg-3 col-sm-6 mix sale shipping">-->
 <!--                        <div class="popular-product-item">-->
 <!--                            <a href="shop-details.html">-->
-<!--                                <img src="{% static 'website/images/popular-product/popular-product3.png' %}" alt="Product Images">-->
+<!--                                <img src="{% static 'application/images/popular-product/popular-product3.png' %}" alt="Product Images">-->
 <!--                            </a>-->
 <!--                            <div class="popular-product-tag tag-bg2">-->
 <!--                                <h3>21%</h3>-->
@@ -521,7 +481,7 @@
 <!--                    <div class="col-lg-3 col-sm-6 mix new top-rising">-->
 <!--                        <div class="popular-product-item">-->
 <!--                            <a href="shop-details.html">-->
-<!--                                <img src="{% static 'website/images/popular-product/popular-product4.png' %}" alt="Product Images">-->
+<!--                                <img src="{% static 'application/images/popular-product/popular-product4.png' %}" alt="Product Images">-->
 <!--                            </a>-->
 <!--                            <div class="popular-product-tag tag-bg1">-->
 <!--                                <h3>33%</h3>-->
@@ -540,7 +500,7 @@
 <!--                    <div class="col-lg-3 col-sm-6 mix sale shipping">-->
 <!--                        <div class="popular-product-item">-->
 <!--                            <a href="shop-details.html">-->
-<!--                                <img src="{% static 'website/images/popular-product/popular-product5.png' %}{% static 'website/alt="Product Images">-->
+<!--                                <img src="{% static 'application/images/popular-product/popular-product5.png' %}{% static 'application/alt="Product Images">-->
 <!--                            </a>-->
 <!--                            <div class="content">-->
 <!--                                <h3><a href="shop-details.html">Fresh Pineapple</a></h3>-->
@@ -556,7 +516,7 @@
 <!--                    <div class="col-lg-3 col-sm-6 mix new top-rising">-->
 <!--                        <div class="popular-product-item">-->
 <!--                            <a href="shop-details.html">-->
-<!--                                <img src="{% static 'website/images/popular-product/popular-product6.png' %}{% static 'website/alt="Product Images">-->
+<!--                                <img src="{% static 'application/images/popular-product/popular-product6.png' %}{% static 'application/alt="Product Images">-->
 <!--                            </a>-->
 <!--                            <div class="popular-product-tag tag-bg2">-->
 <!--                                <h3>12%</h3>-->
@@ -575,7 +535,7 @@
 <!--                    <div class="col-lg-3 col-sm-6 mix sale shipping">-->
 <!--                        <div class="popular-product-item">-->
 <!--                            <a href="shop-details.html">-->
-<!--                                <img src="{% static 'website/images/popular-product/popular-product7.png' %}{% static 'website/alt="Product Images">-->
+<!--                                <img src="{% static 'application/images/popular-product/popular-product7.png' %}{% static 'application/alt="Product Images">-->
 <!--                            </a>-->
 <!--                            <div class="content">-->
 <!--                                <h3><a href="shop-details.html">Rear Organic Butter</a></h3>-->
@@ -591,7 +551,7 @@
 <!--                    <div class="col-lg-3 col-sm-6 mix new top-rising shipping">-->
 <!--                        <div class="popular-product-item">-->
 <!--                            <a href="shop-details.html">-->
-<!--                                <img src="{% static 'website/images/popular-product/popular-product8.png' %}{% static 'website/alt="Product Images">-->
+<!--                                <img src="{% static 'application/images/popular-product/popular-product8.png' %}{% static 'application/alt="Product Images">-->
 <!--                            </a>-->
 <!--                            <div class="popular-product-tag tag-bg1">-->
 <!--                                <h3>New</h3>-->
@@ -717,7 +677,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-lg-4 col-sm-6">
                                 <div class="latest-product-item">
                                     <a href="shop-details.html">
