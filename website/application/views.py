@@ -18,6 +18,10 @@ def home(request):
     context = {
         'obj' : obj
     }
+    prod = Product.objects.all()
+    context = {
+        'prod' : prod
+    }
     wishitem = 0
     totalitem = 0
     if request.user.is_authenticated:
@@ -81,9 +85,6 @@ class CategoryTitle(View):
             wishitem = len(Wishlist.objects.filter(user=request.user))
         product = Product.objects.filter(title=value)
         products = Product.objects.all()
-        context = {
-            'products': products
-        }
         title = Product.objects.filter(category=product[0].category).values('title')
         return render(request, 'application/category.html', locals())
 
