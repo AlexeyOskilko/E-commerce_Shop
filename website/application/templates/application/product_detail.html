@@ -381,32 +381,20 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-12">
                         <div class="product-detls-image">
-                            <img src="{% static 'application/images/products/shop-details-img.png' %}" alt="Image">
+                            <img src="{{product.product_image.url}}" alt="Image">
                         </div>
                     </div>
 
                     <div class="col-lg-6 col-md-12">
                         <div class="product-desc">
-                            <h3>Black Fresh Berry</h3>
+                            <h3>{{product.title}}</h3>
                             <div class="price">
-                                <span class="new-price">$20.00</span>
-                                <span class="old-price">$30.00</span>
+                                <span class="new-price">{{product.discounted_price}}$</span>
+                                <span class="old-price">{{product.selling_price}}$</span>
                             </div>
 
-                            <div class="product-review">
-                                <div class="rating">
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star-half'></i>
-                                </div>
-                                <a href="#" class="rating-count">3 reviews</a>
-                            </div>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                                tempor incididunt ut labore et. Lorem ipsum dolor sit amet, consectetur 
-                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+                                {{product.taste}}
                             </p>
 
                             <div class="input-count-area">
@@ -419,9 +407,12 @@
                             </div>
                 
                             <div class="product-add-btn">
-                                <button type="submit" class="default-btn btn-bg-three">
-                                    <i class="fas fa-cart-plus"></i> Buy Now!
-                                </button>
+                                <form action="/add-to-cart" class="d-inline">
+                                    <input type="hidden" name="prod_id" value="{{product.id}}"/>
+                                    <button type="submit" class="default-btn btn-bg-three">
+                                        <i class="fas fa-cart-plus"></i> Buy Now!
+                                    </button>
+                                </form>
                                 <button type="submit" class="default-btn btn-bg-three">
                                     <i class="fas fa-cart-plus"></i> Add To Cart
                                 </button>
@@ -433,22 +424,17 @@
                                         <span>Share:</span>
                                     </li>
                                     <li>
-                                        <a href="#" target="_blank">
+                                        <a href="https://facebook.com" target="_blank">
                                             <i class='bx bxl-facebook' ></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" target="_blank">
-                                            <i class='bx bxl-linkedin'></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
+                                        <a href="https://twitter.com" target="_blank">
                                             <i class='bx bxl-twitter'></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" target="_blank">
+                                        <a href="https://instagram.com" target="_blank">
                                             <i class='bx bxl-instagram'></i>
                                         </a>
                                     </li>
@@ -475,16 +461,6 @@
                                                 Description
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="#">
-                                                Reviews
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Shipping Information
-                                            </a>
-                                        </li>
                                     </ul>
                                 </div>
 
@@ -492,7 +468,7 @@
                                     <div class="tab_content current active pt-45">
                                         <div class="tabs_item current">
                                             <div class="products-tabs-decs">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu neque ut ipsum tempor varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam eget ligula eget sem lacinia varius. Maecenas maximus vitae ligula sit amet placerat. Suspendisse elementum porttitor erat tempus malesuada. Vestibulum lorem ipsum, congue sed risus cursus, condimentum luctus nibh. Ut convallis ultrices lorem. Donec blandit purus ac lacus finibus, nec feugiat elit auctor.</p>
+                                                <p> {{product.description}} </p>
                                             </div>
                                         </div>
 
