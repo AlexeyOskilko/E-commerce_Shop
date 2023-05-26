@@ -138,7 +138,7 @@
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="cart.html" class="nav-link active">
+                                                    <a href="addtocart.html" class="nav-link active">
                                                         Cart  
                                                     </a>
                                                 </li>
@@ -395,19 +395,21 @@
 										</thead>
 
 										<tbody>
+                                            {% for item in cart %}
+                                            {% with product=item.product %}
 											<tr>
 												<td class="product-thumbnail">
 													<a href="#">
-														<img src="{% static 'application/images/products/products-img1.png' %}" alt="Image">
+														<img src="{{item.product.product_image.url}}" alt="Image">
 													</a>
 												</td>
 
 												<td class="product-name">
-													<a href="#">Organic Butter</a>
+													<a href="#">{{item.product.title}}</a>
                                                 </td>
                                                 
 												<td class="product-price">
-													<span class="unit-amount">$50.00</span>
+													<span class="unit-amount">${{item.product.discounted_price}}</span>
 												</td>
 
 												<td class="product-quantity">
@@ -423,121 +425,17 @@
 												</td>
 
 												<td class="product-subtotal">
-													<span class="subtotal-amount">$50.00</span>
+													<span class="subtotal-amount">${{amount}}</span>
 
 													<a href="#" class="remove">
 														<i class='bx bx-trash'></i>
 													</a>
 												</td>
+                                            {% endwith %}
+                                            {% endfor %}
 											</tr>
 
-											<tr>
-												<td class="product-thumbnail">
-													<a href="#">
-														<img src="{% static 'application/images/products/products-img2.png' %}" alt="Image">
-													</a>
-												</td>
 
-												<td class="product-name">
-													<a href="#">Fresh Carrots</a>
-												</td>
-
-												<td class="product-price">
-													<span class="unit-amount">$30.00</span>
-												</td>
-
-												<td class="product-quantity">
-													<div class="input-counter">
-														<span class="minus-btn">
-															<i class='bx bx-minus'></i>
-														</span>
-														<input type="text" value="1">
-														<span class="plus-btn">
-															<i class='bx bx-plus'></i>
-														</span>
-													</div>
-												</td>
-
-												<td class="product-subtotal">
-													<span class="subtotal-amount">$30.00</span>
-
-													<a href="#" class="remove">
-														<i class='bx bx-trash'></i>
-													</a>
-												</td>
-											</tr>
-
-											<tr>
-												<td class="product-thumbnail">
-													<a href="#">
-														<img src="{% static 'application/images/products/products-img3.png' %}" alt="Image">
-													</a>
-												</td>
-
-												<td class="product-name">
-													<a href="#">Green Cucumber</a>
-												</td>
-
-												<td class="product-price">
-													<span class="unit-amount"> $75.00</span>
-												</td>
-
-												<td class="product-quantity">
-													<div class="input-counter">
-														<span class="minus-btn">
-															<i class='bx bx-minus'></i>
-														</span>
-														<input type="text" value="1">
-														<span class="plus-btn">
-															<i class='bx bx-plus'></i>
-														</span>
-													</div>
-												</td>
-
-												<td class="product-subtotal">
-													<span class="subtotal-amount">$75.00</span>
-
-													<a href="#" class="remove">
-														<i class='bx bx-trash'></i>
-													</a>
-												</td>
-											</tr>
-
-											<tr>
-												<td class="product-thumbnail">
-													<a href="#">
-														<img src="{% static 'application/images/products/products-img4.png' %}" alt="Image">
-													</a>
-												</td>
-
-												<td class="product-name">
-													<a href="#">Fresh Pineapple</a>
-												</td>
-
-												<td class="product-price">
-													<span class="unit-amount">$50.00</span>
-												</td>
-
-												<td class="product-quantity">
-													<div class="input-counter">
-														<span class="minus-btn">
-															<i class='bx bx-minus'></i>
-														</span>
-														<input type="text" value="1">
-														<span class="plus-btn">
-															<i class='bx bx-plus'></i>
-														</span>
-													</div>
-												</td>
-
-												<td class="product-subtotal">
-													<span class="subtotal-amount">$50.00</span>
-
-													<a href="#" class="remove">
-														<i class='bx bx-trash'></i>
-													</a>
-												</td>
-											</tr>
 										</tbody>
 									</table>
 								</div>

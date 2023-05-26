@@ -210,7 +210,7 @@ def add_to_cart(request):
 
 def show_cart(request):
     user = request.user
-    cart = Cart.objects.all() #ЗДЕСЬ ВЕРНУТЬ НА ФИЛЬТР ЮЗЕР
+    cart = Cart.objects.filter(user=user) #ЗДЕСЬ ВЕРНУТЬ НА ФИЛЬТР ЮЗЕР
     amount = 0
     for p in cart:
         value = p.quantity * p.product.discounted_price
@@ -220,7 +220,7 @@ def show_cart(request):
     wishitem = 0
     # totalitem = len(Cart.objects.filter(user=request.user))
     # wishitem = len(Wishlist.objects.filter(user=request.user))
-    return render(request, 'application/cart.html', locals())
+    return render(request, 'application/addtocart.html', locals())
 
 ()
 def show_wishlist(request):
