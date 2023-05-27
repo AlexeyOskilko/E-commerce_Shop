@@ -126,3 +126,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/images/'
 MEDIA_ROOT = BASE_DIR/'images'
 LOGIN_REDIRECT_URL = '/profile/'
+
+RAZOR_KEY_ID = "rzp_test_7SCw5eNAw4d9W0"
+RAZOR_KEY_SECRET = "VTgG6Dp4qQFjNbj4BbxeEFip"

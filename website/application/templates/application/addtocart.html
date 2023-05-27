@@ -34,6 +34,7 @@
 
         <title>Hilo - Organic Food Shop HTML Template</title>
     </head>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <body>
         <!-- Pre Loader -->
         <div class="preloader">
@@ -341,7 +342,7 @@
     
                                     <div class="side-nav-cart">
                                         <a href="#"><i class='bx bx-cart'></i></a>
-                                        <span>1</span>
+                                        <span>{% if totalitem > 0 %} {{totalitem}} {% endif %}</span>
                                     </div>
                                 </div>
                             </div>
@@ -376,141 +377,66 @@
         </div>
         <!-- Inner Banner Area End -->
         <!-- Start Cart Area -->
-		<section class="cart-wraps-area ptb-100">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-md-12">
-						<form>
-							<div class="cart-wraps">
-								<div class="cart-table table-responsive">
-									<table class="table table-bordered">
-										<thead>
-											<tr>
-												<th scope="col">Product</th>
-												<th scope="col">Name</th>
-												<th scope="col">Unit Price</th>
-												<th scope="col">Quantity</th>
-												<th scope="col">Total</th>
-											</tr>
-										</thead>
+		<div class="container my-5">
+  <div class="row">
+    {% if cart %}
+    <h1 class="text-center mb-5">Корзина Покупок</h1>
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+          <h3>Корзина</h3>
+          {% for item in cart %}
+          {% with product=item.product %}
+          <div class="row">
+            <div class="col-sm-3 text-center align-self-center"><img src="{{item.product.product_image.url}}" alt=""
+              srcset="" class="img-fluid img-thumbnail shadow-sm" height="150" width="150"> </div>
+            <div class="col-sm-9">
+              <div>
+                <h5>{{item.product.title}}</h5>
+                <p class="mb-2 text-muted small">{{item.product.descriptions}}</p>
+                <div class="my-3">
+                  <label for="quantity">Количество:</label>
+                  <a class="minus-cart btn" pid={{item.product.id}}><i class="fas fa-minus-square fa-lg"></i></a>
+                  <span id="quantity">{{item.quantity}}</span>
+                  <a class="plus-cart btn" pid={{item.product.id}}><i class="fas fa-plus square fa-lg"></i></a>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <a href="#" class="remove-cart btn btn-sm btn-secondary mr-3" pid={{item.product.id}}>Удалить товар </a>
+                  <p class="mb-0"><span><strong>₽ {{item.product.discounted_price}}</strong></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="text-muted">
+          {% endwith %}
+          {% endfor %}
+        </div>
+        </div>
+      </div>
 
-										<tbody>
-                                            {% for item in cart %}
-                                            {% with product=item.product %}
-											<tr>
-												<td class="product-thumbnail">
-													<a href="#">
-														<img src="{{item.product.product_image.url}}" alt="Image">
-													</a>
-												</td>
-
-												<td class="product-name">
-													<a href="#">{{item.product.title}}</a>
-                                                </td>
-                                                
-												<td class="product-price">
-													<span class="unit-amount">${{item.product.discounted_price}}</span>
-												</td>
-
-												<td class="product-quantity">
-													<div class="input-counter">
-														<span class="minus-btn">
-															<i class='bx bx-minus'></i>
-														</span>
-														<input type="text" value="1">
-														<span class="plus-btn">
-															<i class='bx bx-plus'></i>
-														</span>
-													</div>
-												</td>
-
-												<td class="product-subtotal">
-													<span class="subtotal-amount">${{amount}}</span>
-
-													<a href="#" class="remove">
-														<i class='bx bx-trash'></i>
-													</a>
-												</td>
-                                            {% endwith %}
-                                            {% endfor %}
-											</tr>
-
-
-										</tbody>
-									</table>
-								</div>
-
-								<div class="cart-buttons">
-									<div class="row align-items-center">
-										<div class="col-lg-7 col-sm-7 col-md-7">
-											<div class="continue-shopping-box">
-												<a href="#" class="default-btn btn-bg-three">
-													Continue Shopping
-												</a>
-											</div>
-										</div>
-
-										<div class="col-lg-5 col-sm-5 col-md-5 text-end">
-											<a href="#" class="default-btn btn-bg-three">
-												Update Cart
-											</a>
-										</div>
-									</div>
-								</div>
-                            </div>
-                            
-							<div class="row">
-								<div class="col-lg-6">
-									<div class="cart-calc">
-										<div class="cart-wraps-form"> 
-											<h3>Calculate Shipping</h3>
-											<div class="row">
-												<div class="col-lg-6">
-													<div class="form-group">
-														<select>
-															<option value="">Credit Card Type</option>
-															<option value="">Another option</option>
-															<option value="">A option</option>
-														</select>	
-													</div>
-                                                </div>
-												<div class="form-group col-lg-6">
-													<input type="text" class="form-control" placeholder="Credit Card Number">
-												</div>
-												<div class="form-group col-12">
-													<input type="text" class="form-control" placeholder="Card Verification Number">
-												</div>
-											</div>
-											<div class="form-group">
-												<input type="text" class="form-control" placeholder="Coupon Code">
-											</div>
-											<a href="#" class="default-btn btn-bg-three">
-												Apply Coupon
-											</a>
-										</div>
-									</div>
-                                </div>
-                                
-								<div class="col-lg-6">
-									<div class="cart-totals">
-										<h3>Cart Totals</h3>
-										<ul>
-											<li>Subtotal <span>$150.00</span></li>
-											<li>Shipping <span>$30.00</span></li>
-											<li>Coupon <span>$20.00</span></li>
-											<li>Total <span><b>$160.00</b></span></li>
-										</ul>
-										<a href="#" class="default-btn btn-bg-three">
-											Proceed To Checkout
-										</a>
-									</div>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</section>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h3>Итого к оплате</h3>
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0" >Сумма<span id="amount">₽ {{amount}}</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center px-0">Доставка<span>₽ 150.00</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                <div>
+                  <strong>Итого</strong> <small>(Включая доставку)</small>
+                </div>
+                <span id="totalamount"><strong>₽ {{totalamount}}</strong></span>
+              </li>
+            </ul>
+            <div class="d-grid"><a href="{% url 'checkout' %}" class="default-btn btn-bg-three">Сделать заказ</a></div>
+          </div>
+        </div>
+      </div>
+      {% else %}
+        <h1 class="text-center mb-5">Корзина пуста</h1>
+    {% endif %}
+  </div>
+</div>
 		<!-- End Cart Area -->
 
         <!-- Footer Area -->
@@ -689,6 +615,13 @@
         <script src="{% static 'application/js/mixitup.min.js' %}"></script>
         <!-- Custom JS -->
         <script src="{% static 'application/js/custom.js' %}"></script>
+
+        <script src="{% static 'application/js/myscript.js' %}"></script>
+
+        <script src="{% static 'application/js/all.min.js' %}"></script>
+
+
+
 
     </body>
 </html>
