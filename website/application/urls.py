@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 from django.contrib import admin
 from django.conf import settings
@@ -10,6 +10,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
     path('about/', views.about, name='about'),
+    path('', include('blog.urls')),
     path('contact/', views.contact, name='contact'),
     path('category/<slug:value>', views.CategoryView.as_view(), name='category'),
     path("category-title/<value>", views.CategoryTitle.as_view(), name='category-title'),
