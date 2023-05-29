@@ -129,3 +129,5 @@ LOGIN_REDIRECT_URL = '/profile/'
 
 RAZOR_KEY_ID = "rzp_test_7SCw5eNAw4d9W0"
 RAZOR_KEY_SECRET = "VTgG6Dp4qQFjNbj4BbxeEFip"
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

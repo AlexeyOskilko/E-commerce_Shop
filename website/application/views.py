@@ -1,7 +1,7 @@
 import razorpay
 from django.db.models import Count
 from django.http import JsonResponse
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, get_object_or_404
 from django.views import View
 from .models import Carousel, Cart, Customer, OrderPlaced, Payment, Product, Wishlist
 from .forms import CustomerProfileForm, CustomerRegistrationForm
@@ -193,8 +193,15 @@ class updateAddress(View):
             messages.success(request, 'Изменения успешно сохранены!')
         else:
             messages.warning(request,"Проверьте введённые данные!")
-        return redirect('address')
+        return redirect('address',locals())
 
+
+def delete_address(request, pk=None):
+    add = get_object_or_404(Customer, pk=pk, user=request.user)
+    if request.method  == 'GET':
+        add.delete()
+        return redirect('profile')
+    context = {'add': add}
 
 
 def add_to_cart(request):
