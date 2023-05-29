@@ -203,7 +203,7 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="search-page.html" class="nav-link">
+                                            <a href="search.html" class="nav-link">
                                                 Search Page
                                             </a>
                                         </li>
@@ -262,7 +262,7 @@
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="blog-details.html" class="nav-link">
+                                            <a href="../../../blog/templates/blog-details.html" class="nav-link">
                                                 Blog Details 
                                             </a>
                                         </li>
@@ -352,8 +352,8 @@
 
                     <div class="col-lg-7 col-md-6">
                         <div class="nav-bottom-form-area">
-                            <form class="nav-bottom-form" data-bs-toggle="validator" method="POST">
-                                <input type="text" class="form-control" placeholder="Search Your Item">
+                            <form class="nav-bottom-form" role="search" action="/search">
+                                <input  class="form-control" type="search" placeholder="Искать" name = "search">
                                 <button class="subscribe-btn" type="submit">
                                     Search
                                 </button>
@@ -709,12 +709,12 @@
                 <div class="row pt-45">
                     <div class="col-lg-4 col-md-6">
                         <div class="blog-card blog-color">
-                            <a href="blog-details.html">
+                            <a href="../../../blog/templates/blog-details.html">
                                 <img src="{% static 'application/images/blog/blog-img1.jpg' %}" alt="Images">
                             </a>
                             <div class="content">
                                 <span><i class='bx bx-time-five'></i> Nov 01, 2020</span>
-                                <h3><a href="blog-details.html">We Always Ready to Give You Best Delivery Support </a></h3>
+                                <h3><a href="../../../blog/templates/blog-details.html">We Always Ready to Give You Best Delivery Support </a></h3>
                                 <p>
                                     Lorem ipsum dolor sit amet, consetetur exit sadipscing elitr, sed diam.
                                 </p>
@@ -725,12 +725,12 @@
 
                     <div class="col-lg-4 col-md-6">
                         <div class="blog-card blog-color">
-                            <a href="blog-details.html">
+                            <a href="../../../blog/templates/blog-details.html">
                                 <img src="{% static 'application/images/blog/blog-img2.jpg' %}" alt="Images">
                             </a>
                             <div class="content">
                                 <span><i class='bx bx-time-five'></i> Nov 05, 2020</span>
-                                <h3><a href="blog-details.html">Click  and Make the Payment in the Most Easiest Way</a></h3>
+                                <h3><a href="../../../blog/templates/blog-details.html">Click  and Make the Payment in the Most Easiest Way</a></h3>
                                 <p>
                                     Lorem ipsum dolor sit amet, consetetur exit sadipscing elitr, sed diam.
                                 </p>
@@ -741,12 +741,12 @@
 
                     <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
                         <div class="blog-card blog-color">
-                            <a href="blog-details.html">
+                            <a href="../../../blog/templates/blog-details.html">
                                 <img src="{% static 'application/images/blog/blog-img3.jpg' %}" alt="Images">
                             </a>
                             <div class="content">
                                 <span><i class='bx bx-time-five'></i> Nov 07, 2020</span>
-                                <h3><a href="blog-details.html">Global Ecommerce System Marked as a History </a></h3>
+                                <h3><a href="../../../blog/templates/blog-details.html">Global Ecommerce System Marked as a History </a></h3>
                                 <p>
                                     Lorem ipsum dolor sit amet, consetetur exit sadipscing elitr, sed diam.
                                 </p>
@@ -869,7 +869,7 @@
                                         </a>
                                     </li> 
                                     <li>
-                                        <a href="blog-details.html" target="_blank">
+                                        <a href="../../../blog/templates/blog-details.html" target="_blank">
                                             Blog Details  
                                         </a>
                                     </li> 

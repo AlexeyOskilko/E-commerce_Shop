@@ -7,30 +7,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Bootstrap CSS --> 
-        <link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'application/css/bootstrap.min.css' %}">
         <!-- Animate Min CSS -->
-        <link rel="stylesheet" href="{% static 'website/css/animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'application/css/animate.min.css' %}">
         <!-- Flaticon CSS -->
-        <link rel="stylesheet" href="{% static 'website/fonts/flaticon.css' %}">
+        <link rel="stylesheet" href="{% static 'application/fonts/flaticon.css' %}">
         <!-- Boxicons CSS -->
-        <link rel="stylesheet" href="{% static 'website/css/boxicons.min.css' %}">
+        <link rel="stylesheet" href="{% static 'application/css/boxicons.min.css' %}">
         <!-- Owl Carousel Min CSS --> 
-        <link rel="stylesheet" href="{% static 'website/css/owl.carousel.min.css' %}">
-        <link rel="stylesheet" href="{% static 'website/css/owl.theme.default.min.css' %}">
+        <link rel="stylesheet" href="{% static 'application/css/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'application/css/owl.theme.default.min.css' %}">
         <!-- Nice Select Min CSS --> 
-        <link rel="stylesheet" href="{% static 'website/css/nice-select.min.css' %}">
+        <link rel="stylesheet" href="{% static 'application/css/nice-select.min.css' %}">
         <!-- Meanmenu CSS -->
-        <link rel="stylesheet" href="{% static 'website/css/meanmenu.css' %}">
+        <link rel="stylesheet" href="{% static 'application/css/meanmenu.css' %}">
         <!-- Style CSS -->
-        <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'application/css/style.css' %}">
         <!-- Responsive CSS -->
-        <link rel="stylesheet" href="{% static 'website/css/responsive.css' %}">
+        <link rel="stylesheet" href="{% static 'application/css/responsive.css' %}">
         <!-- Theme Dark CSS -->
-        <link rel="stylesheet" href="{% static 'website/css/theme-dark.css' %}">
+        <link rel="stylesheet" href="{% static 'application/css/theme-dark.css' %}">
 
 
         <!-- Favicon -->
-        <link rel="icon" type="image/png" href="{% static 'website/images/favicon.png' %}">
+        <link rel="icon" type="image/png" href="{% static 'application/images/favicon.png' %}">
 
         <title>Hilo - Organic Food Shop HTML Template</title>
     </head>
@@ -39,7 +39,7 @@
         <div class="preloader">
             <div class="d-table">
                 <div class="d-table-cell">
-                    <img src="{% static 'website/images/preloder-img.png' %}" alt="Images">
+                    <img src="{% static 'application/images/preloder-img.png' %}" alt="Images">
                     <h2>Hilo</h2>
                 </div>
             </div>
@@ -51,7 +51,7 @@
             <!-- Menu For Mobile Device -->
             <div class="mobile-nav">
                 <a href="index.html" class="logo">
-                    <img src="{% static 'website/images/logos/logo-1.png' %}" alt="Logo">
+                    <img src="{% static 'application/images/logos/logo-1.png' %}" alt="Logo">
                 </a>
             </div>
 
@@ -60,8 +60,8 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light ">
                          <a class="navbar-brand" href="index.html">
-                            <img src="{% static 'website/images/logos/logo-2.png' %}" class="logo-one" alt="Logo">
-                            <img src="{% static 'website/images/logos/logo-1.png' %}" class="logo-two" alt="Logo">
+                            <img src="{% static 'application/images/logos/logo-2.png' %}" class="logo-one" alt="Logo">
+                            <img src="{% static 'application/images/logos/logo-1.png' %}" class="logo-two" alt="Logo">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
@@ -90,7 +90,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="#" class="nav-link active">
                                         Pages 
                                         <i class='bx bx-chevron-down'></i>
                                     </a>
@@ -221,7 +221,7 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="search-page.html" class="nav-link">
+                                            <a href="search.html" class="nav-link active">
                                                 Search Page
                                             </a>
                                         </li>
@@ -264,7 +264,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active">
+                                    <a href="#" class="nav-link">
                                         Blog
                                         <i class='bx bx-chevron-down'></i>
                                     </a>
@@ -280,7 +280,7 @@
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="blog-details.html" class="nav-link active">
+                                            <a href="../../../blog/templates/blog-details.html" class="nav-link">
                                                 Blog Details 
                                             </a>
                                         </li>
@@ -358,17 +358,13 @@
                 <div class="row align-items-center">
                     <div class="col-lg-5 col-md-4">
                         <div class="inner-content">
-                            <h2>Blog Details</h2>
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li>Blog Details</li>
-                            </ul>
+                            <h2>Search Results For: "Fresh Vegetables"</h2>
                         </div>
                     </div>
 
                     <div class="col-lg-7 col-md-8">
                         <div class="inner-img">
-                            <img src="{% static 'website/images/inner-banner/inner-banner3.png' %}" alt="Images">
+                            <img src="{% static 'application/images/inner-banner/inner-banner2.png' %}" alt="Images">
                         </div>
                     </div>
                 </div>
@@ -376,309 +372,40 @@
         </div>
         <!-- Inner Banner Area End -->
 
-        <!-- Blog Details Area -->
-        <div class="blog-details-area pt-100 pb-70">
+         <!-- Product Area -->
+         <div class="product-area pt-100 pb-70">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="blog-article">
-                            <div class="blog-article-img">
-                                <img src="{% static 'website/images/blog/blog-details-img1.jpg' %}" alt="Images">
-                                <div class="blog-article-tag">
-                                    <h3>04</h3>
-                                    <span>Nov</span>
-                                </div>
-                            </div>
-
-                            <div class="blog-article-title">
-                                <h2>We Always Ready to Give a Best Delivery Support </h2>
-                                <ul>
-                                    <li>By Admin</li>
-                                    <li>Product Related Post</li>
-                                    <li><i class='bx bx-user'></i>Matthew Richardson</li>
-                                </ul>
-                            </div>
-
-                            <div class="article-content">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pretium, massa vel gravida bibendum, dolor turpis
-                                    mollis sem, id interdum nisl odio vitae velit. Phasellus felis dolor, venenatis in lacus vel, maximus tempor nisi.
-                                    Ut ut felis condimentum, sodales nisi quis, ultrices est. Pellentesque habitant morbi tristique senectus et netus
-                                    et malesuada fames ac turpis egestas. Quisque varius venenatis scelerisque. Phasellus faucibus purus a luctus pharetra.
-                                    Maecenas tincidunt non magna sed lobortis. Cras a nisi ex. Pellentesque felis libero, vulputate id rhoncus ac, hendrerit
-                                    ac velit. Suspendisse sagittis sapien felis, in dignissim enim finibus in. Vestibulum at egestas mauris, vitae fermentum 
-                                    justo.
-                                </p>
-
-                                <blockquote class="blockquote"> 
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tem por invidunt ut labore et
-                                        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-                                        Stet clita kasd gubergren consectetur adipiscing elit consetetur sadipscing elitr, sed diam nonumy eirmod tem por.
-                                    </p>
-                                </blockquote>
-
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. cu 
-                                    sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies ne, 
-                                    pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet n, 
-                                    vu eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis 
-                                    pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aen  
-                                    li, porttitor eu, consequat vitae, eleifend .
-                                </p>
-                            </div>
-
-                            <div class="another-content">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-6">
-                                        <div class="another-content-text">
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pretium, massa vel gravida bibendum, dolor turpis
-                                                mollis sem, id interdum nisl odio vitae velit. Phasellus felis dolor, venenatis in lacus vel, maximus tempor nisi.
-                                                Ut ut felis condimentum, sodales nisi quis, ultrices est. Pellentesque habitant morbi tristique senectus et netus
-                                                et malesuada fames ac turpis egestas. Quisque varius venenatis scelerisque. Phasellus faucibus purus a luctus pharetra.
-                                                Maecenas tincidunt non magna sed lobortis. Cras a nisi ex. Pellentesque felis libero, vulputate id rhoncus ac, hendrerit
-                                                ac velit. Suspendisse sagittis sapien felis, in dignissim enim finibus in. 
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6">
-                                        <div class="content-img">
-                                            <img src="{% static 'website/images/blog/blog-img2.jpg' %}" alt="Images">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="article-content">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. cu 
-                                    sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies ne, 
-                                    pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet n, 
-                                    vu eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis 
-                                    pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aen  
-                                    li, porttitor eu, consequat vitae, eleifend.
-                                </p>
-
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. cu 
-                                    sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies ne, 
-                                    pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet n, 
-                                    vu eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis 
-                                    pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aen  
-                                    li, porttitor eu, consequat vitae, eleifend .
-                                </p>
-                            </div>
-
-                            <div class="comments-wrap">
-                                <div class="comment-title">
-                                    <h3 class="title">Comments (02)</h3>
-                                </div>
-								
-								<ul class="comment-list">
-									<li>
-										<img src="{% static 'website/images/blog/blog-profile1.jpg' %}" alt="Image">
-										<h3>Charles Lauver</h3>
-                                        <span>CEO, Maxcom Corporation</span>
-                                        <div class="content">
-                                            <div class="rating">
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
-                                            </div>
-                                            <span class="date">NOV 05, 2020</span>
-                                        </div>
-										<p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pretium, massa vel gravida bibendum, dolor turpis mollis sem, id interdum nisl odio vitae velit. Phasellus felis dolor, venenatis in lacus vel,
-                                            maximus tempor nisi. Ut ut felis condimentum, sodales nisi quis, ultrices est. Pellentesque habitant morbi tristique senectus et netus et .
-                                        </p>
-										<a href="#">Reply</a>
-                                    </li>
-                                    
-                                    <li>
-										<img src="{% static 'website/images/blog/blog-profile2.jpg' %}" alt="Image">
-										<h3>Peggy Galvan</h3>
-                                        <span>Manager, Devine Limited.</span>
-                                        <div class="content">
-                                            <div class="rating">
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
-                                            </div>
-                                            <span class="date">NOV 05, 2020</span>
-                                        </div>
-										<p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pretium, massa vel gravida bibendum, dolor turpis mollis sem, id interdum nisl odio vitae velit. Phasellus felis dolor, venenatis in lacus vel,
-                                            maximus tempor nisi. Ut ut felis condimentum, sodales nisi quis, ultrices est. Pellentesque habitant morbi tristique senectus et netus et .
-                                        </p>
-                                        <a href="#"> Reply</a>
-                                    </li>
-								</ul>
-                            </div>
-
-                            <div class="comments-form">
-                                <h3 class="title">Leave A Comment</h3>
-                                <div class="contact-form">
-                                    <form id="contactForm">
-                                        <div class="row">
-                                            <div class="col-lg-6 col-sm-6">
-                                                <div class="form-group">
-                                                    <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Your Name">
-                                                </div>
-                                            </div>
-            
-                                            <div class="col-lg-6 col-sm-6">
-                                                <div class="form-group">
-                                                    <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Your Email">
-                                                </div>
-                                            </div>
-    
-                                            <div class="col-lg-12 col-sm-12">
-                                                <div class="form-group">
-                                                    <input type="text" name="websit" class="form-control" required data-error="Your website" placeholder="Your website">
-                                                </div>
-                                            </div>
-            
-                                            <div class="col-lg-12 col-md-12">
-                                                <div class="form-group">
-                                                    <textarea name="message" class="form-control" id="message" cols="30" rows="8" required data-error="Write your message" placeholder="Your Message"></textarea>
-                                                </div>
-                                            </div>
-    
-                                            <div class="col-lg-12 col-md-12">
-                                                <div class="form-group checkbox-option">
-                                                    <input type="checkbox" id="chb2">
-                                                    <p>
-                                                        Save my name, email, and website in this browser for the next time I comment.
-                                                    </p>
-                                                </div>
-                                            </div>
-            
-                                            <div class="col-lg-12 col-md-12">
-                                                <button type="submit" class="default-btn btn-bg-three">
-                                                    Post A Comment
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
+                <div class="product-topper">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="product-topper-title">
+                                <h3>Fresh Vegetables Products  <span>( Showing 1-15 of 120 result )</span> </h3>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-4">
-                        <div class="side-bar-area">
-                            <div class="search-widget">
-                                <form class="search-form">
-                                    <input type="search" class="form-control" placeholder="Search...">
-                                    <button type="submit">
-                                        <i class="bx bx-search"></i>
-                                    </button>
-                                </form>
-                            </div>
-
-                            <div class="side-bar-widget">
-                                <h3 class="title">All Categories</h3>
-                                <div class="side-bar-categories">
-                                    <ul>
-                                        <li>
-                                            <a href="#" class="active">All Categories & Items<span>(70)</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Cooking & Baking<span>(12)</span></a>  
-                                        </li>
-                                        <li>
-                                            <a href="#">Beverage<span>(14)</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Snacks<span>(17)</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Milk and Dairy<span>(37)</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Meat and Fish<span>(18)</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Fruits and Vegetable<span>(22)</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Home & Kitchen Appliance<span>(19)</span></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="side-bar-widget">
-                                <h3 class="title">Recent Posts</h3>
-                                <div class="widget-popular-post">
-                                    <article class="item">
-                                        <a href="news-details.html" class="thumb">
-                                            <span class="full-image cover bg1" role="img"></span>
-                                        </a>
-                                        <div class="info">
-                                            <h4 class="title-text">
-                                                <a href="news-details.html">
-                                                    Fresh Organic Meat 
-                                                </a>
-                                            </h4>
-                                            <p>Nov 05, 2020</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="product-item">
+                            {% for prod in product %}
+                            <div class="product-img">
+                                <a href="{% url 'product-detail' prod.id %}" class="btn">
+                                    <div>
+                                        <img src="{{prod.product_image.url}}" width="300px" height="200px" />
+                                        <div class="fw-bold">{{prod.title}}</div>
+                                        <div class="fw-bold text-danger"> ₽{{prod.discounted_price}}
+                                            <small class="fw-light text-decoration-line-through">{{prod.selling_price}}</small>
                                         </div>
-                                    </article>
-    
-                                    <article class="item">
-                                        <a href="news-details.html" class="thumb">
-                                            <span class="full-image cover bg2" role="img"></span>
-                                        </a>
-                                        <div class="info">
-                                            <h4 class="title-text">
-                                                <a href="news-details.html">
-                                                    Pineapple Price Lower
-                                                </a>
-                                            </h4>
-                                            <p>13 October, 2020</p>
-                                        </div>
-                                    </article>
-    
-                                    <article class="item">
-                                        <a href="news-details.html" class="thumb">
-                                            <span class="full-image cover bg3" role="img"></span>
-                                        </a>
-                                        <div class="info">
-                                            <h4 class="title-text">
-                                                <a href="news-details.html">
-                                                    Higher the Banana Price
-                                                </a> 
-                                            </h4>
-                                            <p>17 October, 2020</p>
-                                        </div>
-                                    </article>
-                                </div>
+                                    </div>
+                                </a>
                             </div>
-
-                            <div class="side-bar-widget">
-                                <h3 class="title">Tags</h3>
-                                <ul class="side-bar-widget-tag">
-                                    <li><a href="#">Basic Food</a></li>
-                                    <li><a href="#">Raw</a></li>
-                                    <li><a href="#">Fresh</a></li>
-                                    <li><a href="#">Rate</a></li>
-                                    <li><a href="#">Price</a></li>
-                                    <li><a href="#">Grocery</a></li>
-                                    <li><a href="#">Category</a></li>
-                                </ul>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Blog Details Area End -->
+        <!-- Product Area End -->
 
         <!-- Footer Area -->
         <footer class="footer-area footer-bg">
@@ -689,8 +416,8 @@
                             <div class="footer-widget footer-widget-color-2">
                                 <div class="footer-logo">
                                     <a href="index.html">
-                                        <img src="{% static 'website/images/logos/footer-logo.png' %}" class="footer-logo1" alt="Images">
-                                        <img src="{% static 'website/images/logos/logo-1.png' %}" class="footer-logo2" alt="Images">
+                                        <img src="{% static 'application/images/logos/footer-logo.png' %}" class="footer-logo1" alt="Images">
+                                        <img src="{% static 'application/images/logos/logo-1.png' %}" class="footer-logo2" alt="Images">
                                     </a>
                                 </div>
                                 <p>
@@ -766,7 +493,7 @@
                                         </a>
                                     </li> 
                                     <li>
-                                        <a href="blog-details.html" target="_blank">
+                                        <a href="../../../blog/templates/blog-details.html" target="_blank">
                                             Blog Details  
                                         </a>
                                     </li> 
@@ -833,29 +560,29 @@
 
 
        <!-- Jquery Min JS -->
-        <script src="{% static 'website/js/jquery.min.js' %}"></script>
+        <script src="{% static 'application/js/jquery.min.js' %}"></script>
         <!-- Bootstrap Min JS -->
-        <script src="{% static 'website/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'application/js/bootstrap.bundle.min.js' %}"></script>
         <!-- Owl Carousel Min JS -->
-        <script src="{% static 'website/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'application/js/owl.carousel.min.js' %}"></script>
         <!-- Nice Select Min JS -->
-        <script src="{% static 'website/js/jquery.nice-select.min.js' %}"></script>
+        <script src="{% static 'application/js/jquery.nice-select.min.js' %}"></script>
         <!-- Wow Min JS -->
-        <script src="{% static 'website/js/wow.min.js' %}"></script>
+        <script src="{% static 'application/js/wow.min.js' %}"></script>
         <!-- Meanmenu JS -->
-        <script src="{% static 'website/js/meanmenu.js' %}"></script>
+        <script src="{% static 'application/js/meanmenu.js' %}"></script>
         <!-- Jquery Ui Min JS -->
-        <script src="{% static 'website/js/jquery-ui.min.js' %}"></script>
+        <script src="{% static 'application/js/jquery-ui.min.js' %}"></script>
         <!-- Ajaxchimp Min JS -->
-        <script src="{% static 'website/js/jquery.ajaxchimp.min.js' %}"></script>
+        <script src="{% static 'application/js/jquery.ajaxchimp.min.js' %}"></script>
         <!-- Form Validator Min JS -->
-        <script src="{% static 'website/js/form-validator.min.js' %}"></script>
+        <script src="{% static 'application/js/form-validator.min.js' %}"></script>
         <!-- Contact Form JS -->
-        <script src="{% static 'website/js/contact-form-script.js' %}"></script>
+        <script src="{% static 'application/js/contact-form-script.js' %}"></script>
         <!-- Mixitup Min JS -->
-        <script src="{% static 'website/js/mixitup.min.js' %}"></script>
+        <script src="{% static 'application/js/mixitup.min.js' %}"></script>
         <!-- Custom JS -->
-        <script src="{% static 'website/js/custom.js' %}"></script>
+        <script src="{% static 'application/js/custom.js' %}"></script>
 
     </body>
 </html>

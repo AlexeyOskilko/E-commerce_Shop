@@ -10,7 +10,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
     path('about/', views.about, name='about'),
-    path('', include('blog.urls')),
     path('contact/', views.contact, name='contact'),
     path('category/<slug:value>', views.CategoryView.as_view(), name='category'),
     path("category-title/<value>", views.CategoryTitle.as_view(), name='category-title'),
@@ -52,6 +51,7 @@ urlpatterns = [
         template_name='application/password_reset_confirm.html', form_class=MySetPasswordForm), name='password_reset_confirm'),
     path('password-reset-complete/', auth_view.PasswordResetCompleteView.as_view(
         template_name='application/password_reset_complete.html'), name='password_reset_complete'),
+    path('', include('blog.urls'))
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 admin.site.site_header = "Tea & Cofee Shop"
