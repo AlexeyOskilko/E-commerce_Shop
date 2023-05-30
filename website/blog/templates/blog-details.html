@@ -383,7 +383,7 @@
                     <div class="col-lg-8">
                         <div class="blog-article">
                             <div class="blog-article-img">
-                                <img src="{% static 'application/images/blog/blog-details-img1.jpg' %}" alt="Images">
+                                <img src="{{post.product_image.url}}" alt="Images">
                             </div>
 
                             <div class="blog-article-title">
@@ -398,19 +398,6 @@
                                 <p>
                                     {{ object.content | safe }}
                                 </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="side-bar-area">
-                            <div class="search-widget">
-                                <form class="search-form">
-                                    <input type="search" class="form-control" placeholder="Search...">
-                                    <button type="submit">
-                                        <i class="bx bx-search"></i>
-                                    </button>
-                                </form>
                             </div>
                         </div>
                     </div>

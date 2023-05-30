@@ -51,7 +51,7 @@
             <!-- Menu For Mobile Device -->
             <div class="mobile-nav">
                 <a href="../../application/templates/application/index.html" class="logo">
-                    <img src="images/logos/logo-1.png' %}" alt="Logo">
+                    <img src="{% static 'application/images/logos/logo-1.png' %}" alt="Logo">
                 </a>
             </div>
 
@@ -388,7 +388,7 @@
                         <div class="blog-card blog-color-2">
                             {% for post in post_list %}
                             <a href="{% url 'post_detail' post.slug  %}">
-                                <img src="{% static 'application/images/blog/blog-img1.jpg' %}" alt="Images">
+                                <img src="{{post.product_image.url}}" alt="Images">
                             </a>
                             <div class="content">
                                 <span><i class='bx bx-time-five'></i> {{ post.created_on}}</span>
