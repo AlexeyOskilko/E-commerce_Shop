@@ -420,6 +420,11 @@
                                         <i class="fas fa-cart-plus"></i> Add To Cart
                                     </button>
                                 </form>
+                                {% if wishlist %}
+                                <a pid={{product.id}} class="minus-wishlist btn btn-danger shadow px-5 py-2 ms-4"><i class="fas fa-heart fa-lg"></i></a> <br>
+                                {% else %}
+                                <a pid={{product.id}} class="plus-wishlist btn btn-success shadow px-5 py-2 ms-4"><i class="fas fa-heart fa-lg"></i></a>
+                                {% endif %}
                             </div>
 
                             <div class="product-share">
@@ -892,6 +897,10 @@
         <script src="{% static 'application/js/mixitup.min.js' %}"></script>
         <!-- Custom JS -->
         <script src="{% static 'application/js/custom.js' %}"></script>
+
+        <script src="{% static 'application/js/all.min.js' %}"></script>
+
+        <script src="{% static 'application/js/myscript.js' %}"></script>
 
     </body>
 </html>

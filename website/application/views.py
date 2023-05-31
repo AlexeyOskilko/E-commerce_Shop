@@ -315,6 +315,18 @@ def minus_wishlist(request):
         return JsonResponse(data)
 
 
+def delete_wishlist(request):
+    if request.method == 'GET':
+        prod_id = request.GET['prod_id']
+        product = Product.objects.get(id=prod_id)
+        user = request.user
+        Wishlist.objects.filter(user=user, product=product).delete()
+        data={
+            'message': 'Wishlist Removed successfully'
+        }
+        return JsonResponse(data)
+
+
 
 def search(request):
     query = request.GET['search']

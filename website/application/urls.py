@@ -29,6 +29,7 @@ urlpatterns = [
 
     path('pluswishlist/', views.plus_wishlist),
     path('minuswishlist/', views.minus_wishlist),
+    path('deletewishlist/', views.delete_wishlist),
 
     #login authentification
     path('registration/', views.CustomerRegistrationView.as_view(),name='customerregistration'),

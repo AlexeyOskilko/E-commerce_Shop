@@ -364,7 +364,7 @@
                     <div class="col-lg-2 col-md-2">
                         <div class="nav-bottom-side">
                             <ul class="nav-bottom-list">
-                                <li><a href="#"><i class='bx bx-heart'></i></a></li>
+                                <li><a href="{% url 'showwishlist' %}"><i class='bx bx-heart'></i></a></li>
                                 <li class="cart-span">
                                     <a href="{% url 'cart:showcart' %}"><i class='bx bx-cart'></i></a>
                                     <span>{% if totalitem > 0 %} {{totalitem}} {% endif %}</span>

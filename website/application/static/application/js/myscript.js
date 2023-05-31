@@ -85,3 +85,19 @@ $('.minus-wishlist').click(function(){
     })
 })
 
+
+$('.delete-wishlist').click(function(){
+    var id=$(this).attr("pid").toString();
+    $.ajax({
+        type:"GET",
+        url:"/deletewishlist",
+        data:{
+            prod_id:id
+        },
+        success:function(data){
+            window.location.href = `http://127.0.0.1:8000/wishlist`
+        }
+    })
+})
+
+
