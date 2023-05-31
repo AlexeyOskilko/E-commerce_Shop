@@ -381,58 +381,54 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
-						<form>
-							<div class="cart-wraps">
-								<div class="cart-table table-responsive">
-									<table class="table table-bordered">
-										<thead>
-											<tr>
-												<th scope="col">Product</th>
-												<th scope="col">Name</th>
-												<th scope="col">Unit Price</th>
-												<th scope="col">Add Cart</th>
-												<th scope="col">Remove</th>
-											</tr>
-										</thead>
+                        <div class="cart-wraps">
+                            <div class="cart-table table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Product</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Unit Price</th>
+                                            <th scope="col">Add Cart</th>
+                                            <th scope="col">Remove</th>
+                                        </tr>
+                                    </thead>
 
-										<tbody>
-                                            {% for prod in product %}
-											<tr>
-												<td class="product-thumbnail">
-													<a href="{% url 'product-detail' prod.product.id %}">
-														<img src="{{prod.product.product_image.url}}" alt="Image">
-													</a>
-												</td>
+                                    <tbody>
+                                        {% for prod in product %}
+                                        <tr>
+                                            <td class="product-thumbnail">
+                                                <a href="{% url 'product-detail' prod.product.id %}">
+                                                    <img src="{{prod.product.product_image.url}}" alt="Image">
+                                                </a>
+                                            </td>
 
-												<td class="product-name">
-													<a href="{% url 'product-detail' prod.product.id %}">{{prod.product.title}}</a>
-                                                </td>
-                                                
-												<td class="product-price">
-													<span class="unit-amount">₽{{prod.product.discounted_price}}</span>
-												</td>
+                                            <td class="product-name">
+                                                <a href="{% url 'product-detail' prod.product.id %}">{{prod.product.title}}</a>
+                                            </td>
 
-												<td class="product-quantity">
-													<form action="/add-to-cart" class="d-inline">
-                                                        <input type="hidden" name="prod_id" value="{{prod.product.id}}"/>
-                                                        <button type="submit" class="default-btn btn-bg-three">
-                                                            <i class="fas fa-cart-plus"></i> Add To Cart
-                                                         </button>
-                                                    </form>
-												</td>
+                                            <td class="product-price">
+                                                <span class="unit-amount">₽{{prod.product.discounted_price}}</span>
+                                            </td>
 
-                                                <div class="product-add-btn">
-												    <td class="product-add-btn">
-													    <a pid={{prod.product.id}} class="delete-wishlist btn"><i class="bx bx-x-circle"></i></a>
-												    </td>
-                                                </div>
-											</tr>
-                                            {% endfor %}
-										</tbody>
-									</table>
-								</div>
+                                            <td class="product-quantity">
+                                                <form action="/add-to-cart" class="d-inline">
+                                                    <input type="hidden" name="prod_id" value="{{prod.product.id}}"/>
+                                                    <button type="submit" class="default-btn btn-bg-three">
+                                                        <i class="fas fa-cart-plus"></i> Add To Cart
+                                                    </button>
+                                                </form>
+                                            </td>
+
+                                            <td class="product-add-btn">
+                                                <a pid={{prod.product.id}} class="delete-wishlist btn"><i class="bx bx-x-circle"></i></a>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
                             </div>
-						</form>
+                        </div>
 					</div>
 				</div>
 			</div>
