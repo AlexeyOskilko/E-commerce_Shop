@@ -90,6 +90,19 @@ class CategoryTitle(View):
         return render(request, 'application/category.html', locals())
 
 
+class ParentCategoryTitle(View):
+    def get(self, request, value):
+        wishitem = 0
+        totalitem = 0
+        if request.user.is_authenticated:
+            totalitem = len(Cart.objects.filter(user=request.user))
+            wishitem = len(Wishlist.objects.filter(user=request.user))
+        product = Product.objects.filter(title=value)
+        products = Product.objects.all()
+        title = Product.objects.filter(category=product[0].category).values('title')
+        return render(request, 'application/category.html', locals())
+
+
 
 class ProductDetail(View):
     def get(self, request,pk):
