@@ -13,12 +13,13 @@ CATEGORY_CHOICES = (
     ('TE', 'Чай'),
     ('BL', 'Чёрный чай'),
     ('GR', 'Зелёный чай'),
+    ('FR', 'Фруктовый'),
     ('CF', 'Кофе'),
     ('KN', 'Кофе Кения'),
     ('BR', 'Кофе Бразилия'),
     ('VT', 'Кофе Вьетнам'),
     ('SP', 'Сиропы'),
-    ('FR', 'Фруктовые сиропы'),
+    ('FS', 'Фруктовые сиропы'),
     ('AL', 'Алкогольные сиропы')
 )
 
@@ -29,6 +30,7 @@ class Product(models.Model):
     displayed_name = models.CharField(max_length=50, default="")
     description = models.TextField()
     category = models.CharField(choices=CATEGORY_CHOICES, max_length=2)
+    parent_category = models.CharField(choices=CATEGORY_CHOICES, max_length=2, default="")
     taste = models.TextField(max_length=200, default="")
     product_image = models.ImageField(upload_to="products", blank=True)
     def __str__(self):

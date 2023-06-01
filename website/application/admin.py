@@ -4,7 +4,7 @@ from django.utils.html import format_html
 from django.urls import reverse
 @admin.register(Product)
 class ProductModelAdmin(admin.ModelAdmin):
-    list_display = ['id', 'title', 'displayed_name', 'taste', 'discounted_price', 'category', 'product_image',]
+    list_display = ['id', 'title', 'displayed_name', 'taste', 'discounted_price', 'category', 'parent_category', 'product_image',]
 
 @admin.register(Carousel)
 class CarouselModelAdmin(admin.ModelAdmin):

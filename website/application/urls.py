@@ -13,6 +13,8 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('category/<slug:value>', views.CategoryView.as_view(), name='category'),
     path("category-title/<value>", views.CategoryTitle.as_view(), name='category-title'),
+    path('parent-category/<slug:value>', views.ParentCategoryView.as_view(), name='parent-category'),
+    path("parent-category-title/<value>", views.ParentCategoryTitle.as_view(), name='parent-category-title'),
     path('product-detail/<int:pk>', views.ProductDetail.as_view(), name='product-detail'),
     path('profile/', views.ProfileView.as_view(), name='profile'),
     path('address/', views.address, name='address'),
@@ -49,7 +51,7 @@ urlpatterns = [
         template_name='application/password_reset_confirm.html', form_class=MySetPasswordForm), name='password_reset_confirm'),
     path('password-reset-complete/', auth_view.PasswordResetCompleteView.as_view(
         template_name='application/password_reset_complete.html'), name='password_reset_complete'),
-    path('cart/', include('blog.urls')),
+    path('blog/', include('blog.urls')),
     path('', include('cart.urls'))
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
