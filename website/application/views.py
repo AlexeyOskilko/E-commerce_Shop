@@ -109,14 +109,16 @@ class ProductDetail(View):
     def get(self, request,pk):
         totalitem = 0
         wishitem = 0
-        totalitem = len(Cart.objects.filter(user=request.user))
-        wishitem = len(Wishlist.objects.filter(user=request.user))
+        if request.user.is_authenticated:
+            totalitem = len(Cart.objects.filter(user=request.user))
+            wishitem = len(Wishlist.objects.filter(user=request.user))
         product = Product.objects.get(pk=pk)
         products = Product.objects.all()
         context = {
             'products': products
         }
-        wishlist = Wishlist.objects.filter(Q(product=product) & Q(user=request.user))
+        if request.user.is_authenticated:
+            wishlist = Wishlist.objects.filter(Q(product=product) & Q(user=request.user))
         return render(request, 'application/product_detail.html', locals())
 
 

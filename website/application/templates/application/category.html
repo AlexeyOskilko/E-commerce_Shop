@@ -138,7 +138,7 @@
 
                                 <li class="nav-item">
                                     <a href="{% url 'blog' %}" class="nav-link">
-                                        Blog
+                                        Блог
                                     </a>
                                 </li>
 
@@ -155,8 +155,8 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
-                                            <a href="{% url 'login' %}" class="nav-link">
-                                                Войти
+                                            <a href="{% url 'profile' %}" class="nav-link">
+                                                Профиль
                                             </a>
                                         </li>
 
@@ -183,12 +183,6 @@
                                 <li class="nav-item">
                                     <a href="{% url 'login' %}" class="nav-link">
                                         Войти
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="{% url 'customerregistration' %}" class="nav-link">
-                                        Зарегистрироваться
                                     </a>
                                 </li>
                                 {% endif %}
@@ -277,6 +271,104 @@
                 </div>
             </div>
         </div>
+
+        <!-- Footer Area -->
+        <footer class="footer-area">
+            <div class="container">
+                <div class="footer-top pt-100 pb-70">
+                    <div class="row">
+                        <div class="col">
+                            <div class="footer-widget footer-widget-color">
+                                <div class="footer-logo">
+                                    <a href="/">
+                                        <img src="{% static 'application/images/logos/footer-logo.png' %}" class="footer-logo1" alt="Images">
+                                        <img src="{% static 'application/images/logos/logo-1.png' %}" class="footer-logo2" alt="Images">
+                                    </a>
+                                </div>
+                                <p>
+                                    We are one of the best & quality full in market. Let's join.
+                                </p>
+                                <ul class="footer-list-contact">
+                                    <li>
+                                        <i class='bx bx-home'></i>
+                                        <a href="https://yandex.ru/search/?text=Хабаровск">г. Хабаровск</a>
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-phone-call' ></i>
+                                        <a href="tel:+7(914)-150-0762">+7(914)-150-0762</a>
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-envelope'></i>
+                                        <a href="mailto:alexeyoskilko@gmail.com">alexeyoskilko@gmail.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget footer-widget-color">
+                                <h3>Services</h3>
+                                <ul class="footer-list">
+                                    <li>
+                                        <a href="{% url 'profile' %}" target="_blank">
+                                            Мой Профиль
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'orders' %}" target="_blank">
+                                            Заказы
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{%url 'showwishlist' %}" target="_blank">
+                                            Избранное
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget footer-widget-color">
+                                <h3>Information</h3>
+                                <ul class="footer-list">
+                                    <li>
+                                        <a href="/" target="_blank">
+                                            Главная
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'about' %}" target="_blank">
+                                            О нас
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'blog' %}" target="_blank">
+                                            Блог
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'cart:showcart' %}" target="_blank">
+                                            Корзина
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="copy-right-area-two">
+                    <div class="copy-right-text">
+                        <p>
+                            Copyright @<script>document.write(new Date().getFullYear())</script> Алексей Оскилко
+                            <a href="https://www.fogstream.ru" target="_blank">Fogstream</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Area End -->
 
 
         <!-- Jquery Min JS -->

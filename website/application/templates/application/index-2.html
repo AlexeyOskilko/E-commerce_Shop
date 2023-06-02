@@ -150,7 +150,7 @@
 
                                 <li class="nav-item">
                                     <a href="{% url 'blog' %}" class="nav-link">
-                                        Blog
+                                        Блог
                                     </a>
                                 </li>
 
@@ -167,8 +167,8 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
-                                            <a href="{% url 'login' %}" class="nav-link">
-                                                Войти
+                                            <a href="{% url 'profile' %}" class="nav-link">
+                                                Профиль
                                             </a>
                                         </li>
 
@@ -194,13 +194,7 @@
                                 {% else %}
                                 <li class="nav-item">
                                     <a href="{% url 'login' %}" class="nav-link">
-                                        Войти
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="{% url 'customerregistration' %}" class="nav-link">
-                                        Зарегистрироваться
+                                        Вход
                                     </a>
                                 </li>
                                 {% endif %}
