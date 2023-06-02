@@ -36,17 +36,11 @@
     </head>
     <body>
         <div class="navbar-area">
-            <!-- Menu For Mobile Device -->
-            <div class="mobile-nav">
-                <a href="/" class="logo">
-                    <img src="{% static 'application/images/logos/logo-1.png' %}" alt="Logo">
-                </a>
-            </div>
 
             <!-- Menu For Desktop Device -->
             <div class="main-nav nav-two">
                 <div class="container">
-                    <nav class="navbar navbar-expand-md navbar-light ">
+                    <nav class=" navbar navbar-expand-md navbar-light">
                         <a class="navbar-brand" href="/">
                             <img src="{% static 'application/images/logos/logo-1.png' %}" alt="Logo">
                         </a>
@@ -58,215 +52,162 @@
                                         Главная
                                     </a>
                                 </li>
+
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        Pages
+                                        Товары
                                         <i class='bx bx-chevron-down'></i>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
-                                            <a href="about.html" class="nav-link">
-                                                About
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link">
-                                                Shop
+                                            <a href="{% url 'parent-category' 'CF' %}" class="nav-link">
+                                                Кофе
                                                 <i class='bx bx-chevron-down'></i>
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li class="nav-item">
-                                                    <a href="shop-details.html" class="nav-link">
-                                                        Shop Details
+                                                    <a href="{% url 'category' 'BR' %}" class="nav-link">
+                                                        Бразилия
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="shop-details-left-sidebar.html" class="nav-link">
-                                                        Shop Details Left Sidebar
+                                                    <a href="{% url 'category' 'KN' %}" class="nav-link">
+                                                        Кения
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="shop-details-right-sidebar.html" class="nav-link">
-                                                        Shop Details Right Sidebar
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="tracking-order.html" class="nav-link">
-                                                        Tracking Order
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="customer-services.html" class="nav-link">
-                                                        Customer Services
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="compare.html" class="nav-link">
-                                                        Compare
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="../../../cart/templates/cart/addtocart.html" class="nav-link">
-                                                        Cart
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="checkout.html" class="nav-link">
-                                                        Checkout
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="wishlist.html" class="nav-link">
-                                                        Wishlist
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="profile.html" class="nav-link">
-                                                        My Account
+                                                    <a href="{% url 'category' 'VT' %}" class="nav-link">
+                                                        Вьетнам
                                                     </a>
                                                 </li>
                                             </ul>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="faq.html" class="nav-link">
-                                                FAQ
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a href="team.html" class="nav-link">
-                                                Team
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a href="testimonials.html" class="nav-link">
-                                                Testimonials
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link">
-                                                User
+                                            <a href="{% url 'parent-category' 'TE' %}" class="nav-link">
+                                                Чай
                                                 <i class='bx bx-chevron-down'></i>
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li class="nav-item">
-                                                    <a href="login.html" class="nav-link">
-                                                        Log In
+                                                    <a href="{% url 'category' 'GR' %}" class="nav-link">
+                                                        Зелёный
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="customerregistration.html" class="nav-link">
-                                                        Registration
+                                                    <a href="{% url 'category' 'BL' %}" class="nav-link">
+                                                        Чёрный
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="forget-password.html" class="nav-link">
-                                                        Forget Password
+                                                    <a href="{% url 'category' 'FR' %}" class="nav-link">
+                                                        Фруктовый
                                                     </a>
                                                 </li>
                                             </ul>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="terms-condition.html" class="nav-link">
-                                                Terms & Conditions
+                                            <a href="{% url 'parent-category' 'SP' %}" class="nav-link">
+                                                Сиропы
+                                                <i class='bx bx-chevron-down'></i>
                                             </a>
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item">
+                                                    <a href="{% url 'parent-category' 'FS' %}" class="nav-link">
+                                                        Фруктовые
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="{% url 'parent-category' 'AL' %}" class="nav-link">
+                                                        Алкогольные
+                                                    </a>
+                                                </li>
+                                            </ul>
                                         </li>
 
-                                        <li class="nav-item">
-                                            <a href="privacy-policy.html" class="nav-link">
-                                                Privacy Policy
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a href="404.html" class="nav-link">
-                                                404 page
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a href="search.html" class="nav-link">
-                                                Search Page
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a href="coming-soon.html" class="nav-link">
-                                                Coming Soon
-                                            </a>
-                                        </li>
                                     </ul>
                                 </li>
 
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        Shop
-                                        <i class='bx bx-chevron-down'></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="shop-left-sidebar.html" class="nav-link">
-                                                Shop Left Sidebar
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="shop-right-sidebar.html" class="nav-link">
-                                                Shop Right Sidebar
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="shop-grid.html" class="nav-link">
-                                                Shop Grid
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="shop-full-width-sidebar.html" class="nav-link">
-                                                Shop Full Width Sidebar
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
 
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{% url 'blog' %}" class="nav-link">
                                         Blog
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="{% url 'about' %}" class="nav-link">
+                                        О нас
+                                    </a>
+                                </li>
+                                {% if request.user.is_authenticated %}
+                                <li class="nav-item">
+                                    <a href="{% url 'profile' %}" class="nav-link">
+                                        {{request.user}}
                                         <i class='bx bx-chevron-down'></i>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
-                                            <a href="blog-1.html" class="nav-link">
-                                                Blog Style One
+                                            <a href="{% url 'login' %}" class="nav-link">
+                                                Войти
                                             </a>
                                         </li>
+
                                         <li class="nav-item">
-                                            <a href="../../../blog/templates/blog-2.html" class="nav-link">
-                                                Blog Style Two
+                                            <a href="{% url 'orders' %}" class="nav-link">
+                                                Заказы
                                             </a>
                                         </li>
+
                                         <li class="nav-item">
-                                            <a href="../../../blog/templates/blog-details.html" class="nav-link">
-                                                Blog Details
+                                            <a href="{% url 'passwordchange' %}" class="nav-link">
+                                                Сменить пароль
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="{% url 'logout' %}" class="nav-link">
+                                                Выйти
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
-
+                                {% else %}
                                 <li class="nav-item">
-                                    <a href="{% url 'contact' %}" class="nav-link">
-                                        Contact
+                                    <a href="{% url 'login' %}" class="nav-link">
+                                        Войти
                                     </a>
                                 </li>
+
+                                <li class="nav-item">
+                                    <a href="{% url 'customerregistration' %}" class="nav-link">
+                                        Зарегистрироваться
+                                    </a>
+                                </li>
+                                {% endif %}
                             </ul>
 
-                            <div class="nav-bar-side">
+                            <div class="col-lg-7 col-md-6">
+                                <div class="nav-bottom-form-area">
+                                    <form class="nav-bottom-form" role="search" action="/search">
+                                        <input  class="form-control" type="search" placeholder="Искать" name = "search">
+                                        <button class="subscribe-btn" type="submit">
+                                            Search
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
 
-                                <div class="nav-bar-btn">
-                                    <a href="profile.html" class="account-btn">My account</a>
+                            <div class="col-lg-1 col-md-2">
+                                <div class="nav-bottom-side">
+                                    <ul class="nav-bottom-list">
+                                        <li><a href="{% url 'showwishlist' %}"><i class='bx bx-heart' style="color: #e3f2fd;"></i></a></li>
+                                        <li class="cart-span">
+                                            <a href="{% url 'cart:showcart' %}"><i class='bx bx-cart' style="color: #e3f2fd;"></i></a>
+                                            <span>{% if totalitem > 0 %} {{totalitem}} {% endif %}</span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -288,18 +229,9 @@
                         <div class="side-nav-inner">
                             <div class="side-nav justify-content-center align-items-center">
                                 <div class="side-nav-item">
-                                    <div class="language-on-list">
-                                        <select class="language-list-item">
-                                            <option>English</option>
-                                            <option>العربيّة</option>
-                                            <option>Deutsch</option>
-                                            <option>Português</option>
-                                            <option>简体中文</option>
-                                        </select>
-                                    </div>
 
                                     <div class="nav-bar-btn">
-                                        <a href="profile.html" class="account-btn">My account</a>
+                                        <a href="{% url 'profile' %}" class="account-btn">My account</a>
                                     </div>
                                 </div>
                             </div>
@@ -310,64 +242,10 @@
         </div>
         <!-- End Navbar Area -->
 
-        <!-- Nav Bottom Area -->
-        <div class="nav-bottom-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-4">
-                        <div class="navbar-category">
-                            <div class="dropdown category-list-dropdown">
-                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButtoncategory" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class='bx bx-list-ul'></i>
-                                        Категории
-                                    <i class='bx bx-chevron-down'></i>
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButtoncategory">
-                                    <a href="{% url 'category' 'TE' %}" class="nav-link-item">
-                                        Чай
-                                    </a>
-                                    <a href="{% url 'category' 'CF' %}">
-                                        кофе
-                                    </a>
-                                    <a href="{% url 'category' 'SP' %}">
-                                        Сиропы
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-7 col-md-6">
-                        <div class="nav-bottom-form-area">
-                            <form class="nav-bottom-form" data-bs-toggle="validator" method="POST">
-                                <input type="text" class="form-control" placeholder="Search Your Item">
-                                <button class="subscribe-btn" type="submit">
-                                    Search
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-2">
-                        <div class="nav-bottom-side">
-                            <ul class="nav-bottom-list">
-                                <li><a href="#"><i class='bx bx-heart'></i></a></li>
-                                <li class="cart-span">
-                                    <a href="#"><i class='bx bx-cart'></i></a>
-                                    <span>1</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Nav Bottom Area End -->
-
             <div class="latest-product-area ptb-100 pb-70">
             <div class="container">
                 <div class="section-title text-center">
-                    <h2>Our Products</h2>
+                    <h2>Наша продукция</h2>
                 </div>
                 <div class="row pt-45">
                     <div class="col-lg-9">
@@ -381,10 +259,9 @@
                                         <div class="content">
                                             <h3><a href="{% url 'product-detail' prod.id %}">{{prod.title}}</a></h3>
                                             <span>${{prod.discounted_price}} </span>
-                                            <ul class="latest-product-action">
-                                                <li><a href="wishlist.html"><i class='bx bx-heart'></i></a></li>
-                                                <li><a href="../../../cart/templates/cart/addtocart.html"><i class='bx bx-cart'></i></a></li>
-                                            </ul>
+                                        </div>
+                                        <div class="content">
+                                            <h5><a href="{% url 'product-detail' prod.id %}">Подробнее</a></h5>
                                         </div>
                                     </div>
                                 </div>
