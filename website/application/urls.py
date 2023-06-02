@@ -10,7 +10,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
     path('about/', views.about, name='about'),
-    path('contact/', views.contact, name='contact'),
     path('category/<slug:value>', views.CategoryView.as_view(), name='category'),
     path("category-title/<value>", views.CategoryTitle.as_view(), name='category-title'),
     path('parent-category/<slug:value>', views.ParentCategoryView.as_view(), name='parent-category'),

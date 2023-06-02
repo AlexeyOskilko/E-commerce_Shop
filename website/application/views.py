@@ -45,21 +45,6 @@ def about(request):
     return render(request, 'application/about.html', locals())
 
 
-
-def contact(request):
-    obj = Carousel.objects.all()
-    context = {
-        'obj': obj
-    }
-    wishitem = 0
-    totalitem = 0
-    if request.user.is_authenticated:
-        totalitem = len(Cart.objects.filter(user=request.user))
-        wishitem = len(Wishlist.objects.filter(user=request.user))
-    return render(request, 'application/contact.html',locals())
-
-
-
 class CategoryView(View):
     def get(self, request, value):
         wishitem = 0
@@ -358,11 +343,11 @@ def delete_wishlist(request):
 
 
 def search(request):
-    query = request.GET['search']
+    query = request.GET.get('search')
     totalitem = 0
     wishitem = 0
     if request.user.is_authenticated:
         totalitem = len(Cart.objects.filter(user=request.user))
         wishitem = len(Wishlist.objects.filter(user=request.user))
-    product = Product.objects.filter(Q(title__icontains=query))
+    product = Product.objects.filter(title__icontains=query)
     return render(request, "application/search.html", locals())
