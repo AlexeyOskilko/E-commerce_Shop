@@ -51,7 +51,7 @@
         <div class="navbar-area">
             <!-- Menu For Mobile Device -->
             <div class="mobile-nav">
-                <a href="index.html" class="logo">
+                <a href="/" class="logo">
                     <img src="{% static 'application/images/logos/logo-1.png' %}" alt="Logo">
                 </a>
             </div>
@@ -133,12 +133,12 @@
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li class="nav-item">
-                                                    <a href="{% url 'parent-category' 'FS' %}" class="nav-link">
+                                                    <a href="{% url 'category' 'FS' %}" class="nav-link">
                                                         Фруктовые
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="{% url 'parent-category' 'AL' %}" class="nav-link">
+                                                    <a href="{% url 'category' 'AL' %}" class="nav-link">
                                                         Алкогольные
                                                     </a>
                                                 </li>
@@ -263,7 +263,7 @@
                         <div class="inner-content">
                             <h2>Checkout </h2>
                             <ul>
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li>Checkout</li>
                             </ul>
                         </div>
@@ -271,7 +271,7 @@
 
                     <div class="col-lg-7 col-md-8">
                         <div class="inner-img">
-                            <img src="{% static 'application/images/inner-banner/inner-banner7.png' %}" alt="Images">
+                            <img src="{% static '/application/images/pngwing.com3423.png' %}" alt="Images">
                         </div>
                     </div>
                 </div>

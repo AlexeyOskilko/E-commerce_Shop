@@ -49,7 +49,7 @@
         <div class="navbar-area">
             <!-- Menu For Mobile Device -->
             <div class="mobile-nav">
-                <a href="index.html" class="logo">
+                <a href="/" class="logo">
                     <img src="{% static 'application/images/logos/logo-1.png' %}{% static 'application/alt="Logo">
                 </a>
             </div>
@@ -131,12 +131,12 @@
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li class="nav-item">
-                                                    <a href="{% url 'parent-category' 'FS' %}" class="nav-link">
+                                                    <a href="{% url 'category' 'FS' %}" class="nav-link">
                                                         Фруктовые
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="{% url 'parent-category' 'AL' %}" class="nav-link">
+                                                    <a href="{% url 'category' 'AL' %}" class="nav-link">
                                                         Алкогольные
                                                     </a>
                                                 </li>
@@ -261,7 +261,7 @@
                         <div class="inner-content">
                             <h2>Shop Details</h2>
                             <ul>
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li>Shop Details</li>
                             </ul>
                         </div>
@@ -299,34 +299,29 @@
                                 {{product.taste}}
                             </p>
                             {% if request.user.is_authenticated %}
-                            <div class="product-add-btn">
-                                <form action="/add-to-cart" class="d-inline">
-                                    <input type="hidden" name="prod_id" value="{{product.id}}"/>
-                                    <button type="submit" class="default-btn btn-bg-three">
-                                        <i class="fas fa-cart-plus"></i> Add To Cart
-                                    </button>
-                                </form>
-                                {% else }
-                                <button type="submit" class="default-btn btn-bg-three"disabled="true">
-                                    <i class="fas fa-cart-plus"></i> Войдите, чтобы добавить товар
-                                </button>
-                                {% if wishlist %}
-                                <a pid={{product.id}} class="minus-wishlist btn btn-danger shadow px-5 py-2 ms-4"><i class="fas fa-heart fa-lg"></i></a> <br>
-                                {% else %}
-                                <a pid={{product.id}} class="plus-wishlist btn btn-success shadow px-5 py-2 ms-4"><i class="fas fa-heart fa-lg"></i></a>
-                                {% endif %}
-                            </div>
+                                <div class="product-add-btn">
+                                    <form action="/add-to-cart" class="d-inline">
+                                        <input type="hidden" name="prod_id" value="{{product.id}}"/>
+                                        <button type="submit" class="default-btn btn-bg-three">
+                                            <i class="fas fa-cart-plus"></i> Add To Cart
+                                        </button>
+                                    </form>
+                                    {% if wishlist %}
+                                    <a pid={{product.id}} class="minus-wishlist btn btn-danger shadow px-5 py-2 ms-4"><i class="fas fa-heart fa-lg"></i></a> <br>
+                                    {% else %}
+                                    <a pid={{product.id}} class="plus-wishlist btn btn-success shadow px-5 py-2 ms-4"><i class="fas fa-heart fa-lg"></i></a>
+                                    {% endif %}
+                                </div>
                             {% else %}
-                            <div class="product-add-btn">
-                                <form action="/add-to-cart" class="d-inline">
-                                    <input type="hidden" name="prod_id" value="{{product.id}}"/>
-                                    <button type="submit" class="btn"disabled>
-                                        <i class="fas fa-cart-plus"></i> Войдите, чтобы добавить товар
-                                    </button>
-                                </form>
-                            </div>
+                                <div class="product-add-btn">
+                                    <form action="/add-to-cart" class="d-inline">
+                                        <input type="hidden" name="prod_id" value="{{product.id}}"/>
+                                        <button type="submit" class="btn"disabled>
+                                            <i class="fas fa-cart-plus"></i> Войдите, чтобы добавить товар
+                                        </button>
+                                    </form>
+                                </div>
                             {% endif %}
-
                             <div class="product-share">
                                 <ul>
                                     <li>
